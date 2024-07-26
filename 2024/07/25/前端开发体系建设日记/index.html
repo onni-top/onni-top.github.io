@@ -1,0 +1,1094 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>前端开发体系建设日记 | onni</title><meta name="keywords" content="前端"><meta name="author" content="你喜欢什么芝士"><meta name="copyright" content="你喜欢什么芝士"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="前端开发体系建设日记"><meta name="application-name" content="前端开发体系建设日记"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="前端开发体系建设日记"><meta property="og:url" content="https://blog.onni.top/2024/07/25/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%93%E7%B3%BB%E5%BB%BA%E8%AE%BE%E6%97%A5%E8%AE%B0/index.html"><meta property="og:site_name" content="onni"><meta property="og:description" content="github上搬运的文章"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://blog.onni.top/img/bg1.jpg"><meta property="article:author" content="你喜欢什么芝士"><meta property="article:tag" content="blog"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://blog.onni.top/img/bg1.jpg"><meta name="description" content="github上搬运的文章"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.onni.top/2024/07/25/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%93%E7%B3%BB%E5%BB%BA%E8%AE%BE%E6%97%A5%E8%AE%B0/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//www.clarity.ms"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?61f5c02a8e11964aa7e3cb6938e180f6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "ncr6tv4d7p");</script><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章上次更新于","messageNext":"天前, 注意内容有效性。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":100,"languages":{"author":"作者: 你喜欢什么芝士","link":"链接: ","source":"来源: onni","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'onni',
+  title: '前端开发体系建设日记',
+  postAI: '',
+  pageFillDescription: '前端开发体系建设日记(github上摘来充数的文章), 2014年02月12日 - 晴, 2014年02月13日 - 多云, 0. 开发概念定义, 1. 开发目录设计, 2. 部署目录设计, 3. 配置fis连接开发规范和部署规范, 2014年02月14日 - 阴转多云, 2014年02月15日 - 超晴, 2014年02月16日 - 小雨, 2014年02月17日 - 多云, 总结前端开发体系建设日记上摘来充数的文章上周写了一篇文章介绍前端集成解决方案的基本理论很多同学看过之后大呼不过瘾干货在哪里本打算继续完善理论链形成前端工程的知识结构但鉴于如今的快餐文化主决定还是先写一篇实战介绍让大家看到前端工程体系能为团队带来哪些好处调起大家的胃口再说写完才发现这篇文章真的非常非常长涵盖了前端开发中的很多方面希望大家能有耐心看完相信一定会有所斩获年月日晴新到松鼠团队的第二天小伙伴找到我说视频项目打算重新梳理一下希望能引入新的技术体系解决现有的一些问题主不禁暗喜好机会这是我专业啊蓝翔技校前端集成解决方案学院自动化系打包学专业的文凭不是白给的于是自信满满的对说有什么需求尽管提我的需求并不多就这么几条模块化开发最好能像写一样写很舒服最好也能来个模块化管理性能要好模块那么多得有按需加载请求不能太多组件化开发一个组件的模板最好都在一个目录维护维护起来方便用作为前端模板引擎这个模板引擎不错轻逻辑用写挺方便给我整一个图片嵌入有些小图可能要以的形式嵌入到页面或者中使用嵌入之前记得压缩图片以减小体积图片压缩应该都没问题吧要能与公司的平台集工具里最好别依赖什么系统库的机器未必支持开发体验要好文件监听浏览器自动刷新一个都不能少我们用作为服务器本地要能预览最好再能抓取线上数据方便调试我倒吸一口凉气但表面故作镇定的说恩确实不多让我们先来看看第一个需求还没等我说完打断我说桥豆麻袋稍等还有一个最重要的需求松鼠公司的松鼠浏览器你知道吧恩它有很多个版本的样子我希望代码发布后能按照版本部署不要彼此覆盖举个例子代码部署结构可能是这样的项目名让历史浏览器浏览历史版本没事还能做个灰度发布啥的多好此外我们将来会有多个项目使用这套开发模式希望能共用一些组件或者模块产品也会公布一些模块给第三方使用所以共享模块功能也要加上总的来说还要追加两个部署需求按版本部署采用非覆盖式发布允许第三方引用项目公共模块怎么样不算复杂吧这个项目很赶天搞定怎么样我凝望着会议室白板上的这些需求正打算争辩什么一扭头发现已经不见了正在沮丧之际小伙伴过来找我跟他大概讲了一下的需求正想跟他抱怨工期问题时却说恩这正是我们需要的开发体系不过我这里还有一个需求我们之前积累了一些业务可以共用的模块放在了公司内的上采用作为发布规范能不能再加上这个组件仓库的支持天时间项前端技术元素靠谱么年月日多云一觉醒来轻松了许多但还有任务在身不敢有半点怠慢整理一下昨天的需求我们来做一个简单的划分规范开发规范模块化开发模块化模块化像一样编码组件化开发维护在一起部署规范采用后端基本部署规范应该参考项目部署按版本号做非覆盖式发布公共模块可发布给第三方共享框架模块化框架支持请求合并按需加载等性能优化点工具可以编译为支持图片压缩允许图片压缩后以编码形式嵌入到或中与平台集成文件监听浏览器自动刷新本地预览数据模拟仓库支持模块安装和使用这样一套规范框架工具和仓库的开发体系服从我之前介绍的前端集成解决方案的描述前端界每天都团队在设计和实现这类系统它们其实是有规律可循的百度出品的就是一个能帮助快速搭建前端集成解决方案的工具使用我应该可以在天之内完成这些任务这不是一篇关于的软文如果这样的一套系统基于实现相信会有非常大量的开发工作天完成几乎是不可能的任务不幸的是现在官网所介绍的并不是而是一个叫的项目该项目并不像字面理解的那样是的加强版而是在的基础上定制的一套面向百度前端团队的解决方案以为后端语言跟有较强的绑定关系有着项技术要素密切配合百度现行技术选型绝大多数非百度前端团队都很难完整接受这项技术选型尤其是其中的部署框架规范跟百度前端团队相关开发规范部署规范以及等有着较深的绑定关系因此如果你的团队用的不是后端模板模块化框架框架的话请查看的文档或许不会有那么多困惑是一个构建系统内核很好的抽象了前端集成解决方案所需的通用工具需求本身不与任何后端语言绑定而基于实现的具体解决方案就会有具体的规范和技术选型了言归正传让我们基于开始实践这套开发体系吧开发概念定义前端开发体系设计第一步要定义开发概念开发概念是指针对开发资源的分类概念开发概念的确立直接影响到规范的定制比如传统的开发概念一般是按照文件类型划分的所以传统前端项目会有这样的目录结构放文件放文件放图片文件放文件这样确实很直接任何智力健全的人都知道每个文件该放在哪里但是这样的开发概念划分将给项目带来较高的维护成本并为项目臃肿埋下了工程隐患理由是如果项目中的一个功能有了问题维护的时候要在目录下找到对应的逻辑修改再到目录下找到对应的样式文件修改一下如果图片不对还要再跑到目录下找对应的开发资源下的文件不知道哪些图片在用哪些已经废弃了谁也不敢删除文件越来越多除非你的团队只有个人你的项目只有很少的代码量而且不用关心性能和未来的维护问题否则以文件为依据设计的开发概念是应该被抛弃的以我个人的经验更倾向于具有一定语义的开发概念综合前面的需求我为这个开发体系确定了个开发资源概念模块化资源模块模块或组件页面资源网站或后端模板页面引用模块化框架加载模块非模块化资源并不是所有的开发资源都是模块化的比如提供模块化框架的本身就不能是一个模块化的文件严格上讲页面也属于一种非模块化的静态资源开发概念越简单越好前面提到的也有类似的开发概念有组件或模块页面测试数据非模块化静态资源有的团队在模块之中又划分出模块和模块组件两种概念开发目录设计基于开发概念的确立接下来就要确定目录规范了我通常会给每种开发资源的目录取一个有语义的名字三种资源我们可以按照概念直接定义目录结构为存放模块化资源存放页面资源存放非模块化资源这样划分目录确实直观但结合前面说过的希望能使用仓库资源因此我决定将模块化资源目录命名为得到存放模块化资源存放页面资源存放非模块化资源而又提到过模块资源分为项目模块和公共模块以及提到过希望能从安装一些公共组件到项目中因此一个目录还不够想到用作为模块安装目录因此我在规范中又追加了一个目录得到存放外部模块资源存放项目模块资源存放页面资源存放非模块化资源说过今后大多数项目采用作为后端是比较常用的的框架项目通常会把后端模板放到目录下把静态资源放到下为了迎合这样的需求我将两个目录调整为和规范又修改为存放外部模块资源存放项目模块资源存放页面资源存放非模块化资源考虑到页面也是一种静态资源而这个名字不具有语义性与其他目录都有概念冲突不如将其与目录合并目录负责存放页面和非模块化资源比较合适因此最终得到的开发目录结构为存放外部模块资源存放项目模块资源存放页面以及非模块化资源部署目录设计托的福咱们的部署策略将会非常复杂根据要求一个完整的部署结果应该是这样的目录结构项目名版本的静态资源都构建到这里版本的静态资源都构建到这里版本的静态资源都构建到这里项目名版本的后端模板都构建到这里版本的后端模板都构建到这里版本的后端模板都构建到这里由于还要部署一些可以被第三方使用的模块下只有项目名的部署还不够应改把模块化文件单独发布出来得到这样的部署结构模块化资源都部署到这个目录下项目名版本的静态资源都构建到这里版本的静态资源都构建到这里版本的静态资源都构建到这里项目名版本的后端模板都构建到这里版本的后端模板都构建到这里版本的后端模板都构建到这里由于这个名字太长了如果部署到这样的路径下会很长这也是一个优化点因此最终决定部署结构为模块化资源都部署到这个目录下公共模块版本号项目名版本号项目名版本号非模块化资源都部署到这个目录下项目名版本号后端模板都构建到这个目录下插一句并不是所有团队都会有这么复杂的部署要求这和松鼠团队的业务需求有关但我相信这个例子也不会是最复杂的每个团队都会有自己的运维需求前端资源部署经常牵连到公司技术架构因此很多前端项目的开发目录结构会和部署要求保持一致这也为项目间模块的复用带来了成本因为代码中写的通常是部署后的路径迁移之后就可能失效了解耦开发规范和部署规范是前端开发体系的设计重点好了去吃个午饭下午继续配置连接开发规范和部署规范我准备了一个样例项目是工具的配置文件接下来我们就要在这里进行构建配置了虽然开发规范和部署规范十分复杂但好在有一个非常强大的功能专门用于分类文件调整发布结构指定文件的各种属性等功能实现所谓构建其核心任务就是将文件按照某种规则进行分类以文件后缀分类以模块化非模块化分类以前端后端代码分类然后针对不同的文件做不同的构建处理闲话少说我们先来看一下基本的配置在中添加代码所有后缀的文件不发布以上配置使得项目中的所有后缀文件都不会发布出来是定义对象发布路径的属性如果对象的属性为那么在项目发布阶段就不会被输出出来在中是一个数组数据数组每个元素是一个对象必须定义属性用以匹配项目文件路径从而进行分类划分属性的取值可以是路径通配字符串或者正则表达式有一个内部的文件系统会给每个源码文件创建一个对象创建对象时按照的配置逐个匹配文件路径匹配成功则把除之外的其他属性赋给对象中各种处理环节及插件都会读取所需的文件对象的属性值而不会自己定义规范有关的工作原理可以看这里以及这里让文件不发布很简单那么目录下的按版本发布要求怎么实现呢其实也是非常简单的配置所有后缀的文件不发布正则匹配文件并将后面的路径捕获为分组发布到分组路径下数组的第二元素据采用正则作为匹配规则正则可以帮我们捕获到分组信息在属性值中引用分组是非常方便的正则匹配捕获分组成为目录规范配置的强有力工具在上面的配置中版本号被写到了匹配规则里这样非常不方便工程师在迭代的过程中升级项目版本我们应该将版本号项目名称等配置独立出来管理好在还有读取其他配置的能力修改上面的配置我们得到开发部署规范配置所有后缀的文件不发布使用引用的其他配置项项目配置将独立配置统管全局的配置系统非常灵活除了文档中提到的配置节点其他配置用户可以随便定义使用比如配置的是系统保留的而都是用户自己随便指定的系统保留的配置节点只有个包括系统配置构建流程配置插件配置目录规范与域名配置部署目标配置打包配置完成第一份配置之后我们来看一下效果进入到项目目录然后使用命令对项目进行构建用参数指定编译结果的产出路径可以看到部署后的结果会将处理后的结果发布到源码目录之外的其他目录里以保持源码目录的干净系统的强大之处在于当你调整了部署规范之后会识别所有资源定位标记将他们修改为对应的部署路径的文件系统设计决定了配置开发规范的成本非常低构建核心有三个超级正则用于识别资源定位标记把用户的开发规范和部署规范通过配置完整连接起来具体实现可以看这里不止为前端三种领域语言都准备了资源定位识别标记更多文档可以看这里在中定位资源在中定位资源在中定位资源接下来我们修改一下项目版本配置再发布一下看看效果再次执行得到至此我们已经基本解决了开发和部署直接的目录规范问题这里我需要加快一些步伐把其他目录的部署规范也配置好得到一个相对比较完整的结果后缀的文件不发布目录下的代码由于规范已经有了版本号我将它们直接发送到目录下就好了项目模块化目录没有版本号结构用全局版本号控制发布结构目录下的文件发布到项目名版本目录下其他文件就不属于前端项目了比如的后端代码不处理这些文件的资源定位替换也不用对这些资源进行压缩我构造了一个相对完整的目录结构然后进行了一次构建效果还不错不管部署规则多么复杂都不用担心有强大的资源定位系统帮你在开发规范和部署规范之间建立联系设计开发体系不在受制于工具的实现能力你可以尽情发挥想象力设计出最优雅最合理的开发规范和最高效最贴合公司运维要求的部署规范最终用的功能将它们连接起来实现完美转换的功能实际上提供了项目代码与部署规范解耦的能力从前面的例子可以看出开发使用相对路径即可会在构建时会根据中的配置完成开发路径到部署路径的转换工作这意味着在体系下开发的模块将具有天然的可移植性既能满足不同项目的不同部署需求又能允许开发中使用相对路径进行资源定位工程师再不用把部署路径写到代码中了愉快的一天就这么过去了睡觉年月日阴转多云每到周五总是非常惬意的感觉不管这一周多么辛苦周五就是一个解脱更何况今天还是个特别的日子情人节昨天主要解决了开发概念开发目录规范部署目录规范以及初步的配置今天要进行前端开发体系设计的关键任务模块化框架模块化框架是前端开发体系中最为核心的环节模块化框架肩负着模块管理资源加载性能优化按需请求合并等多种重要职责同时它也是组件开发的基础框架因此模块化框架设计的好坏直接影响到开发体系的设计质量很遗憾的说现在市面上已有的模块化框架都没能很好的处理模块管理资源加载和性能优化三者之间的关系这倒不是框架设计的问题而是由前端领域语言特殊性决定的框架设计者一般在思考模块化框架时通常站在纯前端运行环境角度考虑基本功能都是用原生实现的因此一个模块化开发的关键问题不能被很好的解决这个关键问题就是依赖声明以为例无意冒犯采用运行时分析的方式实现依赖声明识别并根据依赖关系做进一步的模块加载比如如下代码当要执行一个模块的函数之前会先分析函数体中的书写具体代码在这里和这里大概的代码逻辑如下抽取函数体的字符串内容设计一个正则分析语句扫描字符串得到所声明的依赖加载依赖完成后再执行由于框架设计是在纯前端实现的约束条件下使得模块化框架对于依赖的分析必须在模块资源加载完成之后才能做出识别这将引起两个性能相关的问题被强制为关键字而不能被压缩否则的分析将没有意义依赖加载只能串行进行当一个模块加载完成之后才知道后面的依赖关系第一个问题还好尤其是在下差不多多少字节但是要配置压缩器保留函数不压缩第二个问题就比较麻烦了虽然有插件可以一定程度上减少请求但仍然不能很好的解决这个问题举个例子有如下模块依赖关系树图片来源采用插件之后静态资源请求的效果是这样的工作过程是框架先请求了入口文件加载完成后分析函数发现依赖了和然后发起一个请求加载和和加载完成后又进一步分析源码才发现还依赖了和再发起请求加载这三个文件完成的加载之后再分析发现依赖再请求完成的请求的依赖全部满足执行它的函数虽然可以在依赖层级上进行合并但完成的请求仍需要个很多团队在使用的时候为了避免这样的串行依赖请求问题会自己实现打包方案将所有文件直接打包在一起放弃了模块化的按需加载能力也是一种无奈之举原因很简单以纯前端方式来实现模块依赖加载不能同时解决性能优化问题归根结底这样的结论是由前端领域语言的特点决定的前端语言缺少三种编译能力前面讲目录规范和部署规范时其实已经提到了一种能力就是资源定位的能力让工程师使用开发路径定位资源编译后可转换为部署路径其他语言编写的程序几乎都没有这种物理上分离的资源部署策略而且大多具都有类似这样的函数用于在运行环境下定位当初的开发资源这样不管项目怎么部署只要函数运行正常就行了可惜前端语言没有这样的资源定位接口只有这样的资源定位符它指向的其实并不是开发路径而是部署路径这里可以简单列举出前端语言缺少三种的语言能力资源定位的能力使用开发路径进行资源定位项目发布后转换成部署路径依赖声明的能力声明一个资源依赖另一个资源的能力资源嵌入的能力把一个资源的编译内容嵌入到另一个文件中以后我会在完善前端开发体系理论的时候在详细介绍这三种语言能力的必要性和原子性这里就暂时不展开说明了最核心的编译思想就是围绕这三种语言能力设计的要兼顾性能的同时解决模块化依赖管理和加载问题其关键点在于不能运行时去分析模块间的依赖关系而要让框架提前知道依赖树了解了原因我们就要自己动手设计模块化框架了不要害怕模块化框架其实很简单思想规范都是经过很多前辈总结的结果我们只要遵从他们的设计思想去实现就好了参照已有规范我定义了三个模块化框架接口模块定义接口异步加载接口框架配置接口利用构建工具建立模块依赖关系表再将关系表注入到代码中调用接口让框架知道完整的依赖树从而实现在异步加载模块时能提前预知所有依赖的资源一次性请求回来以上面的依赖树为例构建工具会生成如下代码当执行语句时框架查询表就能知道要发起一个这样的请求从而实现按需加载和请求合并两项性能优化需求根据这样的设计思路我请帮忙实现了这个框架我告诉他里不但会有还会有所以也要兼容一下果然是执行能力非常强的小伙伴仅一个下午的时间就搞定了框架的实现我们给这个框架取名为仅有行前面提到具有资源依赖声明的编译能力因此只要工程师按照规定的书写方式在代码中声明依赖关系就能在构建的最后阶段自动获得系统整理好的依赖树然后对依赖的数据结构进行调整输出满足框架要求就搞定了规定的资源依赖声明方式为在中声明依赖在中声明依赖在中声明依赖接下来我要写一个配置将依赖关系表注入到代码中构建是分流程的具体构建流程可以看这里会在阶段之前创建好完整的依赖树表我就在这个时候写一个插件来处理即可编辑插件接受个参数包含了所有项目资源以及资源表依赖树其中包括所有项目文件对象所有项目打包生成的额外文件资源表结构化数据其他参数暂时不用管创建一个对象存放处理后的配置项依赖树数据遍历所有项目文件文件的依赖数据就在对象的属性中直接赋值即可在阶段处理依赖树调用插件函数我们准备一下项目代码看看构建的时候发生了什么执行查看命令行输出可以看到的内容为可以看到和同名的自动建立了依赖关系这是默认进行的依赖声明有了这个表我们就可以把它注入到代码中了我们为页面准备一个替换用的钩子比如约定为这样用户就可以根据需要在合适的地方获取并使用这些数据模块化框架的配置一般都是写在非模块化文件中的比如页面里所以我们应该只针对目录下的文件做这样的替换就可以所以我们需要给下的文件进行一个标记只有下的或文件才需要进行依赖树数据注入具体的配置为给目录下的文件加一个属性标记用以标记文件分类我们可以在插件中拿到文件对象的这个值把配置文件序列化再次遍历文件找到标记的文件替换里面的钩子有标记并且是或者类文件才需要做替换替换文件内容项目配置将独立配置统管全局我在中写了这样的代码执行之后得到构建后的内容为在调用之际模块化框架已经知道了这个依赖于以及因此可以发起两个请求去加载所有依赖的文件完成后再执行回调现在模块的有一些问题因为模块发布会有版本号信息因此模块也应该携带版本信息从前面的依赖树生成配置代码中我们可以看到模块其实也是文件的一个属性因此我们可以在中重新为文件赋予属性使其携带版本信息追加属性追加属性为项目名版本号文件路径给目录下的文件加一个属性标记用以标记文件分类我们可以在插件中拿到文件对象的这个值重新构建项目我们得到了新的结果所有都会被修改为我们指定的模式这就是以文件为中心的编译系统的威力以文件对象为中心构建系统应该通过配置指定文件的各种属性插件并不自己实现某种规范规定而是读取对象的对应属性值这样插件的职责单一规范又能统一起来被用户指定为完整的前端开发体系设计奠定了坚实规范配置的基础接下来还有一个问题就是模块名太长开发中写这么长的模块名非常麻烦我们可以借鉴流行的模块化框架中常用的缩短模块名手段别名来降低开发中模块引用的成本此外目前的配置其实会针对所有文件生成依赖关系表我们的开发概念定义只有和目录下的文件才是模块化的因此我们可以进一步的对文件进行分类得到这样配置规范追加标记属性追加标记属性然后我们为一些模块建立别名别名收集表添加判断只有和目录下的文件才需要建立依赖树或别名判断一下文件名和文件夹是否同名如果同名则建立一个别名再次构建在注入的代码中就能看到字段了这样代码中的就等价于了还剩最后一个小小的需求就是希望能像写一样开发模块也就是要求实现的自动包裹功能这个可以通过文件编译的插件完成配置为在对所有后缀的文件进行内容处理只对模块化文件进行包装所有在目录和目录下的文件都会被包裹并自动根据中的配置进行模块定义了最煎熬的一天终于过去了睡一觉拥抱一下周末年月日超晴周末的天气非常好哇一觉睡到中午才起这么好的天气写码岂不是很年月日小雨居然浪费了一天剩下的时间不多了今天要抓紧啊让我们来回顾一下已经完成了哪些工作规范开发规范模块化开发模块化模块化像一样的模块化开发组件化开发维护在一起部署规范采用后端基本部署规范应该参考项目部署按版本号做非覆盖式发布公共模块可发布给第三方共享框架模块化框架支持请求合并按需加载等性能优化点工具可以编译为支持图片压缩允许图片压缩后以编码形式嵌入到或中与平台集成文件监听浏览器自动刷新本地预览数据模拟仓库支持模块安装和使用剩下的几个需求中有些是默认支持的比如内嵌功能图片会先经过编译流程得到压缩后的内容再对其进行化的内嵌处理由于的内嵌功能支持任意文件的内嵌所以这个语言能力扩展可以同时解决前端模板和图片内嵌需求比如我们有这样的代码无需配置既可以在中嵌入资源比如中可以这样写依赖声明把文件的字符串形式嵌入到中把图片的嵌入到中编译后得到依赖声明把文件的字符串形式嵌入到中把图片的嵌入到中支持也非常简单在阶段处理非标准语言这个阶段可以把非标准的前端模板语言转换为标准的或处理之后那些文件还能和标准语言一起经历预处理语言能力扩展后处理校验测试压缩等阶段所以要支持的编译只要在中添加这样的配置即可依赖开源的包编译插件只负责处理文件内容配置编译流程后缀的文件经过编译插件函数处理告诉后缀的文件被当做处理编译后后缀也是这样我们项目中的后缀的文件都会被编译为内容并且会在后面的流程中被当做内容处理比如压缩等文件监听自动刷新都是内置的功能的命令集合了所有编译所需的参数这些参数是可以随意组合的比如我们想文件监听自动刷新则使用压缩打包文件监听自动刷新发布到目录则使用构建工具不需要那么多命令或者等不同状态的配置文件应该从命令行切换编译参数从而实现开发上线构建模式的切换另外是命令行工具各种内置的插件也是完全独立无环境依赖的可以与平台直接对接并在各个主流操作系统下运行正常利用的内置的各种编译功能我们离目标又近了许多规范开发规范模块化开发模块化模块化像一样的模块化开发组件化开发维护在一起部署规范采用后端基本部署规范应该参考项目部署按版本号做非覆盖式发布公共模块可发布给第三方共享框架模块化框架支持请求合并按需加载等性能优化点工具可以编译为支持图片压缩允许图片压缩后以编码形式嵌入到或中与平台集成文件监听浏览器自动刷新本地预览数据模拟仓库支持模块安装和使用剩下两个我们可以通过扩展的命令行插件来实现有个编译流程扩展点还有一个命令行扩展点要扩展命令行插件很简单只要我们将插件安装到与同级的目录下即可比如那么执行这个命令就能调用到那个插件了剩下的这个模块安装我就利用了这个扩展点结合开源的包我就可以把整合当前开发体系中这里我们需要创建一个包来提供扩展而不能直接在中扩展命令行插件代码我就不贴了可以看这里眼前我们有了一个差不多行的文件还有几个插件如果我把这样一个零散的系统交付团队使用那么大家使用的步骤差不多是这样的安装安装安装用的命令行插件安装编译插件下载一份配置文件修改里面的配置这种情况让团队用起来会有很多问题首先安装过程太过麻烦其次如果项目多那么不能同步升级这是非常严重的问题的也是如此如果说有一个项目用了某套配置感觉很爽那么下个项目也想用这套方案复制是必须的操作项目用的多了同步的成本就变得非常高了因此提供了一种包装的能力它允许你将作为内核包装出一个新的命令行工具这个工具内置了一些的配置并且把所有命令行调用的参数传递给内核去处理我准备把这套系统打包为一个新的工具给它取名为也是一只松鼠这个新工具的目录结构是这样的其中的内容为一下模块声明命令行工具名称定义插件前缀允许加载插件或者插件这样可以形成自己的插件系统把前面的配置都写在这里统一管理项目中就不用再写了将这个包发布出来我们就有了一个全新的开发工具这个工具可以解决前面说的项技术问题并提供一套完整的集成解决方案而你的团队使用的时候只有两个步骤安装这个工具项目配置只有两项和使用新工具的命令参数几乎和完全一样而这个工具所内置的配置将变成规范文档描述给团队同学这套系统要比那种松散的构建系统组成方式更容易被多个团队多个项目同时共享熬了一个通宵基本算是完成了年月日多云终于到了周一交付了一个新的开发工具及其使用文档然而过去的三天为了构造这套前端开发体系都写了哪些代码呢基于的一套规范及插件配置行命令行插件用于安装模块行命令行插件用于启动的服务器行编译的插件行编译的插件行一个模块化框架行一共行代码用了人天总结不可否认为大规模前端团队设计集成解决方案需要花费非常多的心思如果说只是实现一个简单的编译压缩文件监听自动刷新的常规构建系统基于应该不超过小时就能完成一个但要实践完整的前端集成解决方案确实需要点时间如之前一篇文章所讲前端集成解决方案有项技术要素除了组件仓库其他项对于企业级前端团队来说应该都需要完整实现的即便暂时不想实现也会随着业务发展而被迫慢慢完善这个完善过程是普适的对于前端集成解决方案的实践可以总结出这些设计步骤设计开发概念定义开发资源的分类模块化非模块化设计开发目录降低开发维护成本开发规范根据运维和业务要求设计部署规范部署规范设计工具完成开发目录和部署目录的转换开发部署转换设计模块化框架兼顾性能优化开发框架扩展工具支持开发框架的构建需求框架构建需求流程整合开发测试联调上线等流程接入我们可以看看业界已有团队提出的各种解决方案无不以这种思路来设计和发展的开发体系支付宝团队前端开发体系以为构建和包管理工具百度绝大多数前端团队使用的开发体系以为构建工具内核以为包管理工具百度前端开发体系以为构建和包管理工具腾讯团队出品的开发体系出品的解决方案以为构建工具为包管理工具纵观这些公司出品的前端集成解决方案深入剖析其中的框架规范工具和流程都可以发现一些共通的影子设计思想殊途同归不约而同的朝着一种方向前进那就是前端集成解决方案尝试将前端工程孤立的技术要素整合起来解决常见的领域问题或许有人会问不就是写页面么用得着这么复杂在这里我不能给出肯定或者否定的答复因为单纯从语言的角度来说甚至有人认为是数据结构而非语言确实是最简单最容易上手的开发语言不用模块化不用工具不用压缩任何人都可以快速上手完成一两个功能简单的页面所以说在一般情况下前端开发非常简单在规模很小的项目中前端技术要素彼此不会直接产生影响因此无需集成解决方案但正是由于前端语言这种灵活松散的特点使得前端项目规模在达到一定规模后工程问题凸显成为发展瓶颈各种技术要素彼此之间开始出现关联要用模块化开发就必须对应某个模块化框架用这个框架就必须对应某个构建工具要用这个工具就必须对应某个包管理工具这个时候完整实践前端集成解决方案就成了不二选择当前端项目达到一定规模后工程问题将成为主要瓶颈原来孤立的技术要素开始彼此产生影响需要有人从比较高的角度去梳理寻找适合自己团队的集成解决方案所以会出现一些框架或工具在小项目中使用的好好的一旦放到团队里使用就非常困难的情况前端入门虽易工程不易且行写珍惜',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-25 18:44:08',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/tx1.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog.onni.top/" title="博客"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://img.onni.top/" title="onni图床"><img class="back-menu-item-icon" src="https://img.onnni.top/favicon.ico" alt="onni图床"/><span class="back-menu-item-text">onni图床</span></a><a class="back-menu-item" href="https://blog.onni.top/" title="个人主页"><img class="back-menu-item-icon" src="/img/tx1.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://gemini.onni.top/" title="gemini"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="gemini"/><span class="back-menu-item-text">gemini</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://nextchat.onni.top/" title="nextchat"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="nextchat"/><span class="back-menu-item-text">nextchat</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">onni</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/gallery/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-cube faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/QR-wx3.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src="/img/QR-wx3.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/QR-ali3.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/img/QR-ali3.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">音乐</div><span class="author-content-item-title">灵魂的碰撞💥</span></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">42</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url">前端</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E4%BB%80%E4%B9%88%E9%83%BD%E5%AD%A6%E4%B8%80%E7%82%B9/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>什么都学一点</span></a><a class="article-meta__tags" href="/tags/%E6%90%AC%E8%BF%90/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>搬运</span></a><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>前端</span></a></span></div></div><h1 class="post-title" itemprop="name headline">前端开发体系建设日记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-07-25T10:44:08.000Z" title="发表于 2024-07-25 18:44:08">2024-07-25</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-07-25T10:44:08.000Z" title="更新于 2024-07-25 18:44:08">2024-07-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span id="" data-flag-title="前端开发体系建设日记"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span class="waline-pageview-count" data-path="/2024/07/25/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%93%E7%B3%BB%E5%BB%BA%E8%AE%BE%E6%97%A5%E8%AE%B0/" title="访问量"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为斯洛伐克"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>斯洛伐克</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/img/bg1.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://blog.onni.top/2024/07/25/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%93%E7%B3%BB%E5%BB%BA%E8%AE%BE%E6%97%A5%E8%AE%B0/"><header><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url">前端</a><a href="/tags/%E4%BB%80%E4%B9%88%E9%83%BD%E5%AD%A6%E4%B8%80%E7%82%B9/" tabindex="-1" itemprop="url">什么都学一点</a><a href="/tags/%E6%90%AC%E8%BF%90/" tabindex="-1" itemprop="url">搬运</a><a href="/tags/%E5%89%8D%E7%AB%AF/" tabindex="-1" itemprop="url">前端</a><h1 id="CrawlerTitle" itemprop="name headline">前端开发体系建设日记</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">你喜欢什么芝士</span><time itemprop="dateCreated datePublished" datetime="2024-07-25T10:44:08.000Z" title="发表于 2024-07-25 18:44:08">2024-07-25</time><time itemprop="dateCreated datePublished" datetime="2024-07-25T10:44:08.000Z" title="更新于 2024-07-25 18:44:08">2024-07-25</time></header><h1 id="前端开发体系建设日记-github上摘来充数的文章"><a href="#前端开发体系建设日记-github上摘来充数的文章" class="headerlink" title="前端开发体系建设日记(github上摘来充数的文章)"></a>前端开发体系建设日记(github上摘来充数的文章)</h1><p>上周写了一篇 <a target="_blank" rel="noopener" href="https://github.com/fouber/blog/issues/1">文章</a> 介绍前端集成解决方案的基本理论，很多同学看过之后大呼不过瘾。</p>
+<blockquote>
+<p>干货 <del>fuck things</del> 在哪里！</p>
+</blockquote>
+<p>本打算继续完善理论链，形成前端工程的知识结构。但鉴于如今的快餐文化，po主决定还是先写一篇实战介绍，让大家看到前端工程体系能为团队带来哪些好处，调起大家的胃口再说。</p>
+<blockquote>
+<p>ps: 写完才发现这篇文章真的非常非常长，涵盖了前端开发中的很多方面，希望大家能有耐心看完，相信一定会有所斩获。。。</p>
+</blockquote>
+<h2 id="2014年02月12日-晴"><a href="#2014年02月12日-晴" class="headerlink" title="2014年02月12日 - 晴"></a>2014年02月12日 - 晴</h2><p>新到松鼠团队的第二天，小伙伴 <a target="_blank" rel="noopener" href="https://github.com/ninozhang">@nino</a> 找到我说</p>
+<blockquote>
+<p>nino: 视频项目打算重新梳理一下，希望能引入新的技术体系，解决现有的一些问题。</p>
+</blockquote>
+<p>po主不禁暗喜，好机会，这是我专业啊，蓝翔技校-前端集成解决方案学院-自动化系-打包学专业的文凭不是白给的，于是自信满满的对nino说，有什么需求尽管提！</p>
+<blockquote>
+<p>nino: 我的需求并不多，就这么几条~~</p>
+</blockquote>
+<ol>
+<li>模块化开发。最好能像写nodejs一样写js，很舒服。css最好也能来个模块化管理！</li>
+<li>性能要好。模块那么多，得有按需加载，请求不能太多。</li>
+<li>组件化开发。一个组件的js、css、模板最好都在一个目录维护，维护起来方便。</li>
+<li>用 <a target="_blank" rel="noopener" href="http://handlebarsjs.com/">handlebars</a> 作为前端模板引擎。这个模板引擎不错，logic-less（轻逻辑）。</li>
+<li>用 <a target="_blank" rel="noopener" href="http://learnboost.github.io/stylus/">stylus</a> 写css挺方便，给我整一个。</li>
+<li>图片base64嵌入。有些小图可能要以base64的形式嵌入到页面、js或者css中使用。嵌入之前记得压缩图片以减小体积。</li>
+<li>js&#x2F;css&#x2F;图片压缩应该都没问题吧。</li>
+<li>要能与公司的ci平台集。工具里最好别依赖什么系统库，ci的机器未必支持。</li>
+<li>开发体验要好。文件监听，浏览器自动刷新(<a target="_blank" rel="noopener" href="http://www.livereload.com/">livereload</a>)一个都不能少。</li>
+<li>我们用nodejs作为服务器，本地要能预览，最好再能抓取线上数据，方便调试。</li>
+</ol>
+<p>我倒吸一口凉气，但表面故作镇定的说：恩，确实不多，让我们先来看看第一个需求。。。</p>
+<p>还没等我说完，nino打断我说</p>
+<blockquote>
+<p>nino: 桥豆麻袋(稍等)，还有一个最重要的需求！</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">松鼠公司的松鼠浏览器你知道吧，恩，它有很多个版本的样子。</span><br><span class="line">我希望代码发布后能按照版本部署，不要彼此覆盖。</span><br><span class="line"></span><br><span class="line">举个例子，代码部署结构可能是这样的：</span><br><span class="line"></span><br><span class="line">  release/</span><br><span class="line">    - public/</span><br><span class="line">      - 项目名</span><br><span class="line">        - 1.0.0/</span><br><span class="line">        - 1.0.1/</span><br><span class="line">        - 1.0.2/</span><br><span class="line">        - 1.0.2-alpha/</span><br><span class="line">        - 1.0.2-beta/</span><br><span class="line"></span><br><span class="line">让历史浏览器浏览历史版本，没事还能做个灰度发布，ABTest啥的，多好!</span><br><span class="line"></span><br><span class="line">此外，我们将来会有多个项目使用这套开发模式，希望能共用一些组件或者模</span><br><span class="line">块，产品也会公布一些api模块给第三方使用，所以共享模块功能也要加上。</span><br></pre></td></tr></table></figure>
+
+<p>总的来说，还要追加两个部署需求：</p>
+<ol>
+<li>按版本部署，采用非覆盖式发布</li>
+<li>允许第三方引用项目公共模块</li>
+</ol>
+<blockquote>
+<p>nino: 怎么样，不算复杂吧，这个项目很赶，<code>3天</code>搞定怎么样？</p>
+</blockquote>
+<p>我凝望着会议室白板上的这些需求，正打算争辩什么，一扭头发现nino已经不见了。。。正在沮丧之际，小伙伴 <a target="_blank" rel="noopener" href="https://github.com/hinc">@hinc</a> 过来找我，跟他大概讲了一下nino的需求，正想跟他抱怨工期问题时，hinc却说</p>
+<blockquote>
+<p>hinc: 恩，这正是我们需要的开发体系，不过我这里还有一个需求。。。</p>
+</blockquote>
+<ol>
+<li>我们之前积累了一些业务可以共用的模块，放在了公司内的gitlab上，采用 <a target="_blank" rel="noopener" href="http://component.io/">component</a> 作为发布规范，能不能再加上这个组件仓库的支持？</li>
+</ol>
+<p>3天时间，13项前端技术元素，靠谱么。。。</p>
+<h2 id="2014年02月13日-多云"><a href="#2014年02月13日-多云" class="headerlink" title="2014年02月13日 - 多云"></a>2014年02月13日 - 多云</h2><p>一觉醒来，轻松了许多，但还有任务在身，不敢有半点怠慢。整理一下昨天的需求，我们来做一个简单的划分。</p>
+<ul>
+<li>规范<ul>
+<li>开发规范<ul>
+<li>模块化开发，js模块化，css模块化，像nodejs一样编码</li>
+<li>组件化开发，js、css、handlebars维护在一起</li>
+</ul>
+</li>
+<li>部署规范<ul>
+<li>采用nodejs后端，基本部署规范应该参考 <a target="_blank" rel="noopener" href="http://expressjs.com/">express</a> 项目部署</li>
+<li>按版本号做非覆盖式发布</li>
+<li>公共模块可发布给第三方共享</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>框架<ul>
+<li>js模块化框架，支持请求合并，按需加载等性能优化点</li>
+</ul>
+</li>
+<li>工具<ul>
+<li>可以编译stylus为css</li>
+<li>支持js、css、图片压缩</li>
+<li>允许图片压缩后以base64编码形式嵌入到css、js或html中</li>
+<li>与ci平台集成</li>
+<li>文件监听、浏览器自动刷新</li>
+<li>本地预览、数据模拟</li>
+</ul>
+</li>
+<li>仓库<ul>
+<li>支持component模块安装和使用</li>
+</ul>
+</li>
+</ul>
+<p>这样一套规范、框架、工具和仓库的开发体系，服从我之前介绍的 <a target="_blank" rel="noopener" href="https://github.com/fouber/blog/issues/1">前端集成解决方案</a> 的描述。前端界每天都团队在设计和实现这类系统，它们其实是有规律可循的。百度出品的 <a target="_blank" rel="noopener" href="https://github.com/fis-dev/fis/wiki">fis</a> 就是一个能帮助快速搭建前端集成解决方案的工具。使用fis我应该可以在3天之内完成这些任务。</p>
+<blockquote>
+<p>ps: 这不是一篇关于fis的软文，如果这样的一套系统基于grunt实现相信会有非常大量的开发工作，3天完成几乎是不可能的任务。</p>
+</blockquote>
+<p>不幸的是，现在fis官网所介绍的 <strong>并不是</strong> fis，而是一个叫 <a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-plus">fis-plus</a> 的项目，该项目并不像字面理解的那样是fis的加强版，而是在fis的基础上定制的一套面向百度前端团队的解决方案，以php为后端语言，跟smarty有较强的绑定关系，有着 <code>19项</code> 技术要素，密切配合百度现行技术选型。绝大多数非百度前端团队都很难完整接受这19项技术选型，尤其是其中的部署、框架规范，跟百度前端团队相关开发规范、部署规范、以及php、smarty等有着较深的绑定关系。</p>
+<p>因此如果你的团队用的不是 <code>php后端</code> &amp;&amp; <code>smarty模板</code> &amp;&amp; <code>modjs模块化框架</code> &amp;&amp; <code>bingo框架</code> 的话，请查看 <a target="_blank" rel="noopener" href="https://github.com/fis-dev/fis/wiki">fis的文档</a>，或许不会有那么多困惑。</p>
+<blockquote>
+<p>ps: fis是一个构建系统内核，很好的抽象了前端集成解决方案所需的通用工具需求，本身不与任何后端语言绑定。而基于fis实现的具体解决方案就会有具体的规范和技术选型了。</p>
+</blockquote>
+<p>言归正传，让我们基于 <a target="_blank" rel="noopener" href="https://github.com/fis-dev/fis/">fis</a> 开始实践这套开发体系吧！</p>
+<h3 id="0-开发概念定义"><a href="#0-开发概念定义" class="headerlink" title="0. 开发概念定义"></a>0. 开发概念定义</h3><p>前端开发体系设计第一步要定义开发概念。开发概念是指针对开发资源的分类概念。开发概念的确立，直接影响到规范的定制。比如，传统的开发概念一般是按照文件类型划分的，所以传统前端项目会有这样的目录结构：</p>
+<ul>
+<li>js：放js文件</li>
+<li>css：放css文件</li>
+<li>images：放图片文件</li>
+<li>html：放html文件</li>
+</ul>
+<p>这样确实很直接，任何智力健全的人都知道每个文件该放在哪里。但是这样的开发概念划分将给项目带来较高的维护成本，并为项目臃肿埋下了工程隐患，理由是：</p>
+<ol>
+<li>如果项目中的一个功能有了问题，维护的时候要在js目录下找到对应的逻辑修改，再到css目录下找到对应的样式文件修改一下，如果图片不对，还要再跑到images目录下找对应的开发资源。</li>
+<li>images下的文件不知道哪些图片在用，哪些已经废弃了，谁也不敢删除，文件越来越多。</li>
+</ol>
+<blockquote>
+<p>ps: 除非你的团队只有1-2个人，你的项目只有很少的代码量，而且不用关心性能和未来的维护问题，否则，以文件为依据设计的开发概念是应该被抛弃的。</p>
+</blockquote>
+<p>以我个人的经验，更倾向于具有一定语义的开发概念。综合前面的需求，我为这个开发体系确定了3个开发资源概念：</p>
+<ul>
+<li>模块化资源：js模块、css模块或组件</li>
+<li>页面资源：网站html或后端模板页面，引用模块化框架，加载模块</li>
+<li>非模块化资源：并不是所有的开发资源都是模块化的，比如提供模块化框架的js本身就不能是一个模块化的js文件。严格上讲，页面也属于一种非模块化的静态资源。</li>
+</ul>
+<blockquote>
+<p>ps: 开发概念越简单越好，前面提到的fis-plus也有类似的开发概念，有组件或模块（widget），页面（page），测试数据（test），非模块化静态资源（static）。有的团队在模块之中又划分出api模块和ui模块（组件）两种概念。</p>
+</blockquote>
+<h3 id="1-开发目录设计"><a href="#1-开发目录设计" class="headerlink" title="1. 开发目录设计"></a>1. 开发目录设计</h3><p>基于开发概念的确立，接下来就要确定目录规范了。我通常会给每种开发资源的目录取一个有语义的名字，三种资源我们可以按照概念直接定义目录结构为：</p>
+<pre><code>project
+  - modules       存放模块化资源
+  - pages         存放页面资源
+  - static        存放非模块化资源
+</code></pre>
+<p>这样划分目录确实直观，但结合前面hinc说过的，希望能使用component仓库资源，因此我决定将模块化资源目录命名为<code>components</code>，得到：</p>
+<pre><code>project
+  - components    存放模块化资源
+  - pages         存放页面资源
+  - static        存放非模块化资源
+</code></pre>
+<p>而nino又提到过模块资源分为项目模块和公共模块，以及hinc提到过希望能从component安装一些公共组件到项目中，因此，一个components目录还不够，想到nodejs用node_modules作为模块安装目录，因此我在规范中又追加了一个 <code>component_modules</code> 目录，得到：</p>
+<pre><code>project
+  - component_modules    存放外部模块资源
+  - components           存放项目模块资源
+  - pages                存放页面资源
+  - static               存放非模块化资源
+</code></pre>
+<p>nino说过今后大多数项目采用nodejs作为后端，express是比较常用的nodejs的server框架，express项目通常会把后端模板放到 <code>views</code> 目录下，把静态资源放到 <code>public</code> 下。为了迎合这样的需求，我将page、static两个目录调整为 <code>views</code> 和 <code>public</code>，规范又修改为：</p>
+<pre><code>project
+  - component_modules    存放外部模块资源
+  - components           存放项目模块资源
+  - views                存放页面资源
+  - public               存放非模块化资源
+</code></pre>
+<p>考虑到页面也是一种静态资源，而<code>public</code>这个名字不具有语义性，与其他目录都有概念冲突，不如将其与<code>views</code>目录合并，views目录负责存放页面和非模块化资源比较合适，因此最终得到的开发目录结构为：</p>
+<pre><code>project
+  - component_modules    存放外部模块资源
+  - components           存放项目模块资源
+  - views                存放页面以及非模块化资源
+</code></pre>
+<h3 id="2-部署目录设计"><a href="#2-部署目录设计" class="headerlink" title="2. 部署目录设计"></a>2. 部署目录设计</h3><p>托nino的福，咱们的部署策略将会非常复杂，根据要求，一个完整的部署结果应该是这样的目录结构：</p>
+<pre><code>release
+  - public
+    - 项目名
+      - 1.0.0    1.0.0版本的静态资源都构建到这里
+      - 1.0.1    1.0.1版本的静态资源都构建到这里
+      - 1.0.2    1.0.2版本的静态资源都构建到这里
+      ...
+  - views
+    - 项目名
+      - 1.0.0    1.0.0版本的后端模板都构建到这里
+      - 1.0.1    1.0.1版本的后端模板都构建到这里
+      - 1.0.2    1.0.2版本的后端模板都构建到这里
+      ...
+</code></pre>
+<p>由于还要部署一些可以被第三方使用的模块，public下只有项目名的部署还不够，应改把模块化文件单独发布出来，得到这样的部署结构：</p>
+<pre><code>release
+  - public
+    - component_modules   模块化资源都部署到这个目录下
+      - module_a
+        - 1.0.0
+          - module_a.js
+          - module_a.css
+          - module_a.png
+        - 1.0.1
+        - 1.0.2
+        ...
+    - 项目名
+      - 1.0.0    1.0.0版本的静态资源都构建到这里
+      - 1.0.1    1.0.1版本的静态资源都构建到这里
+      - 1.0.2    1.0.2版本的静态资源都构建到这里
+      ...
+  - views
+    - 项目名
+      - 1.0.0    1.0.0版本的后端模板都构建到这里
+      - 1.0.1    1.0.1版本的后端模板都构建到这里
+      - 1.0.2    1.0.2版本的后端模板都构建到这里
+      ...
+</code></pre>
+<p>由于 <code>component_modules</code> 这个名字太长了，如果部署到这样的路径下，url会很长，这也是一个优化点，因此最终决定部署结构为：</p>
+<pre><code>release
+  - public
+    - c                   模块化资源都部署到这个目录下
+      - 公共模块
+        - 版本号
+      - 项目名
+        - 版本号
+    - 项目名
+      - 版本号             非模块化资源都部署到这个目录下
+  - views
+    - 项目名
+      - 版本号             后端模板都构建到这个目录下
+</code></pre>
+<p>插一句，并不是所有团队都会有这么复杂的部署要求，这和松鼠团队的业务需求有关，但我相信这个例子也不会是最复杂的。每个团队都会有自己的运维需求，前端资源部署经常牵连到公司技术架构，因此很多前端项目的开发目录结构会和部署要求保持一致。这也为项目间模块的复用带来了成本，因为代码中写的url通常是部署后的路径，迁移之后就可能失效了。</p>
+<blockquote>
+<p>解耦开发规范和部署规范是前端开发体系的设计重点。</p>
+</blockquote>
+<p>好了，去吃个午饭，下午继续。。。</p>
+<h3 id="3-配置fis连接开发规范和部署规范"><a href="#3-配置fis连接开发规范和部署规范" class="headerlink" title="3. 配置fis连接开发规范和部署规范"></a>3. 配置fis连接开发规范和部署规范</h3><p>我准备了一个样例项目：</p>
+<pre><code>project
+  - views
+    - logo.png
+    - index.html
+  - fis-conf.js
+  - README.md
+</code></pre>
+<p><code>fis-conf.js</code>是fis工具的配置文件，接下来我们就要在这里进行构建配置了。虽然开发规范和部署规范十分复杂，但好在fis有一个非常强大的 <a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#roadmappath">roadmap.path</a> 功能，专门用于分类文件、调整发布结构、指定文件的各种属性等功能实现。</p>
+<blockquote>
+<p>所谓构建，其核心任务就是将文件按照某种规则进行分类（以文件后缀分类，以模块化&#x2F;非模块化分类，以前端&#x2F;后端代码分类），然后针对不同的文件做不同的构建处理。</p>
+</blockquote>
+<p>闲话少说，我们先来看一下基本的配置，在 <code>fis-conf.js</code> 中添加代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.path&#x27;</span>, [</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**.md&#x27;</span>,   <span class="comment">//所有md后缀的文件</span></span><br><span class="line">        release : <span class="literal">false</span>  <span class="comment">//不发布</span></span><br><span class="line">    &#125;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以上配置，使得项目中的所有md后缀文件都不会发布出来。release是定义file对象发布路径的属性，如果file对象的release属性为false，那么在项目发布阶段就不会被输出出来。</p>
+</blockquote>
+<p>在fis中，roadmap.pah是一个数组数据，数组每个元素是一个对象，必须定义 <code>reg</code> 属性，用以匹配项目文件路径从而进行分类划分，reg属性的取值可以是路径通配字符串或者正则表达式。fis有一个内部的文件系统，会给每个源码文件创建一个 <a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-kernel/blob/master/lib/file.js">fis.File</a> 对象，创建File对象时，按照roadmap.path的配置逐个匹配文件路径，匹配成功则把除reg之外的其他属性赋给File对象，fis中各种处理环节及插件都会读取所需的文件对象的属性值，而不会自己定义规范。有关roadmap.path的工作原理可以看<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-kernel/blob/master/lib/file.js#L156">这里</a> 以及 <a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-kernel/blob/master/lib/uri.js#L48-L70">这里</a>。</p>
+<p>ok，让md文件不发布很简单，那么views目录下的按版本发布要求怎么实现呢？其实也是非常简单的配置：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.path&#x27;</span>, [</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**.md&#x27;</span>,   <span class="comment">//所有md后缀的文件</span></span><br><span class="line">        release : <span class="literal">false</span>  <span class="comment">//不发布</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//正则匹配【/views/**】文件，并将views后面的路径捕获为分组1</span></span><br><span class="line">        reg : <span class="regexp">/^\/views\/(.*)$/i</span>,</span><br><span class="line">        <span class="comment">//发布到 public/proj/1.0.0/分组1 路径下</span></span><br><span class="line">        release : <span class="string">&#x27;/public/proj/1.0.0/$1&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+
+<p>roadmap.path数组的第二元素据采用正则作为匹配规则，正则可以帮我们捕获到分组信息，在release属性值中引用分组是非常方便的。正则匹配 + 捕获分组，成为目录规范配置的强有力工具：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/fouber/blog/master/assets/roadmap.path.png" alt="roadmap.path"></p>
+<p>在上面的配置中，版本号被写到了匹配规则里，这样非常不方便工程师在迭代的过程中升级项目版本。我们应该将版本号、项目名称等配置独立出来管理。好在roadmap.path还有读取其他配置的能力，修改上面的配置，我们得到：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//开发部署规范配置</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.path&#x27;</span>, [</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**.md&#x27;</span>,   <span class="comment">//所有md后缀的文件</span></span><br><span class="line">        release : <span class="literal">false</span>  <span class="comment">//不发布</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/views\/(.*)$/i</span>,</span><br><span class="line">        <span class="comment">//使用$&#123;xxx&#125;引用fis.config的其他配置项</span></span><br><span class="line">        release : <span class="string">&#x27;/public/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line"><span class="comment">//项目配置，将name、version独立配置，统管全局</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;proj&#x27;</span>);</span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;version&#x27;</span>, <span class="string">&#x27;1.0.0&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>fis的配置系统非常灵活，除了 <a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI">文档</a> 中提到的配置节点，其他配置用户可以随便定义使用。比如配置的roadmap是系统保留的，而name、version都是用户自己随便指定的。fis系统保留的配置节点只有6个，包括：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#projectcharset">project</a>（系统配置）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#modulesparser">modules</a>（构建流程配置）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#settings">settings</a>（插件配置）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#roadmappath">roadmap</a>（目录规范与域名配置）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#deploy">deploy</a>（部署目标配置）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#pack">pack</a>（打包配置）</li>
+</ol>
+<p>完成第一份配置之后，我们来看一下效果。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> project</span><br><span class="line">fis release --dest ../release</span><br></pre></td></tr></table></figure>
+
+<p>进入到项目目录，然后使用fis release命令，对项目进行构建，用 <code>--dest &lt;path&gt;</code> 参数指定编译结果的产出路径，可以看到部署后的结果：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/fouber/blog/master/assets/release.png?v" alt="fis release"></p>
+<blockquote>
+<p>ps: fis release会将处理后的结果发布到源码目录之外的其他目录里，以保持源码目录的干净。</p>
+</blockquote>
+<p>fis系统的强大之处在于当你调整了部署规范之后，fis会识别所有资源定位标记，将他们修改为对应的部署路径。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/fouber/blog/master/assets/uri.png" alt="资源定位替换"></p>
+<p>fis的文件系统设计决定了配置开发规范的成本非常低。fis构建核心有三个超级正则，用于识别资源定位标记，把用户的开发规范和部署规范通过配置完整连接起来，具体实现可以看<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-kernel/blob/master/lib/compile.js#L376-L465">这里</a>。</p>
+<blockquote>
+<p>不止html，fis为前端三种领域语言都准备了资源定位识别标记，更多文档可以看这里：<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90#%E5%9C%A8html%E4%B8%AD%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90">在html中定位资源</a>，<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90#%E5%9C%A8js%E4%B8%AD%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90">在js中定位资源</a>，<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90#%E5%9C%A8css%E4%B8%AD%E5%AE%9A%E4%BD%8D%E8%B5%84%E6%BA%90">在css中定位资源</a></p>
+</blockquote>
+<p>接下来，我们修改一下项目版本配置，再发布一下看看效果：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;version&#x27;</span>, <span class="string">&#x27;1.0.1&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>再次执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> project</span><br><span class="line">fis release --dest ../release</span><br></pre></td></tr></table></figure>
+
+<p>得到：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/fouber/blog/master/assets/uri2.png" alt="资源定位替换2"></p>
+<p>至此，我们已经基本解决了开发和部署直接的目录规范问题，这里我需要加快一些步伐，把其他目录的部署规范也配置好，得到一个相对比较完整的结果：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.path&#x27;</span>, [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//md后缀的文件不发布</span></span><br><span class="line">        reg : <span class="string">&#x27;**.md&#x27;</span>,</span><br><span class="line">        release : <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//component_modules目录下的代码，由于component规范，已经有了版本号</span></span><br><span class="line">        <span class="comment">//我将它们直接发送到public/c目录下就好了</span></span><br><span class="line">        reg : <span class="regexp">/^\/component_modules\/(.*)$/i</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//项目模块化目录没有版本号结构，用全局版本号控制发布结构</span></span><br><span class="line">        reg : <span class="regexp">/^\/components\/(.*)$/i</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//views目录下的文件发布到【public/项目名/版本】目录下</span></span><br><span class="line">        reg : <span class="regexp">/^\/views\/(.*)$/</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//其他文件就不属于前端项目了，比如nodejs的后端代码</span></span><br><span class="line">        <span class="comment">//不处理这些文件的资源定位替换（useStandard: false）</span></span><br><span class="line">        <span class="comment">//也不用对这些资源进行压缩(useOptimizer: false)</span></span><br><span class="line">        reg : <span class="string">&#x27;**&#x27;</span>,</span><br><span class="line">        useStandard : <span class="literal">false</span>,</span><br><span class="line">        useOptimizer : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;proj&#x27;</span>);</span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;version&#x27;</span>, <span class="string">&#x27;1.0.2&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>我构造了一个相对完整的目录结构，然后进行了一次构建，效果还不错：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/fouber/blog/master/assets/spec.png" alt="项目构建"></p>
+<p>不管部署规则多么复杂都不用担心，有fis强大的资源定位系统帮你在开发规范和部署规范之间建立联系，设计开发体系不在受制于工具的实现能力。</p>
+<blockquote>
+<p>你可以尽情发挥想象力，设计出最优雅最合理的开发规范和最高效最贴合公司运维要求的部署规范，最终用fis的roadmap.path功能将它们连接起来，实现完美转换。</p>
+<p>fis的roadmap功能实际上提供了项目代码与部署规范解耦的能力。</p>
+</blockquote>
+<p>从前面的例子可以看出，开发使用相对路径即可，fis会在构建时会根据fis-conf.js中的配置完成开发路径到部署路径的转换工作。这意味着在fis体系下开发的模块将具有天然的可移植性，既能满足不同项目的不同部署需求，又能允许开发中使用相对路径进行资源定位，工程师再不用把部署路径写到代码中了。</p>
+<p>愉快的一天就这么过去了，睡觉！</p>
+<h2 id="2014年02月14日-阴转多云"><a href="#2014年02月14日-阴转多云" class="headerlink" title="2014年02月14日 - 阴转多云"></a>2014年02月14日 - 阴转多云</h2><p>每到周五总是非常惬意的感觉，不管这一周多么辛苦，周五就是一个解脱，更何况今天还是个特别的日子——情人节！</p>
+<p>昨天主要解决了开发概念、开发目录规范、部署目录规范以及初步的fis-conf.js配置。今天要进行前端开发体系设计的关键任务——模块化框架。</p>
+<blockquote>
+<p>模块化框架是前端开发体系中最为核心的环节。</p>
+</blockquote>
+<p>模块化框架肩负着模块管理、资源加载、性能优化（按需，请求合并）等多种重要职责，同时它也是组件开发的基础框架，因此模块化框架设计的好坏直接影响到开发体系的设计质量。</p>
+<p>很遗憾的说，现在市面上已有的模块化框架都没能很好的处理模块管理、资源加载和性能优化三者之间的关系。这倒不是框架设计的问题，而是由前端领域语言特殊性决定的。框架设计者一般在思考模块化框架时，通常站在纯前端运行环境角度考虑，基本功能都是用原生js实现的，因此一个模块化开发的关键问题不能被很好的解决。这个关键问题就是<code>依赖声明</code>。</p>
+<p>以 <a target="_blank" rel="noopener" href="http://seajs.org/">seajs</a> 为例（无意冒犯），seajs采用运行时分析的方式实现依赖声明识别，并根据依赖关系做进一步的模块加载。比如如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">define</span>(<span class="keyword">function</span>(<span class="params"><span class="built_in">require</span></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> foo = <span class="built_in">require</span>(<span class="string">&quot;foo&quot;</span>);</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>当seajs要执行一个模块的factory函数之前，会先分析函数体中的<code>require</code>书写，具体代码在<a target="_blank" rel="noopener" href="https://github.com/seajs/seajs/blob/master/src/module.js#L286">这里</a>和<a target="_blank" rel="noopener" href="https://github.com/seajs/seajs/blob/master/src/util-deps.js">这里</a>，大概的代码逻辑如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Module</span>.<span class="property">define</span> = <span class="keyword">function</span> (<span class="params">id, deps, factory</span>) &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="comment">//抽取函数体的字符串内容</span></span><br><span class="line">    <span class="keyword">var</span> code = factory.<span class="title function_">toString</span>();</span><br><span class="line">    <span class="comment">//设计一个正则，分析require语句</span></span><br><span class="line">    <span class="keyword">var</span> reg = <span class="regexp">/\brequire\s*\(([.*]?)\)/g</span>;</span><br><span class="line">    <span class="keyword">var</span> deps = [];</span><br><span class="line">    <span class="comment">//扫描字符串，得到require所声明的依赖</span></span><br><span class="line">    code.<span class="title function_">replace</span>(reg, <span class="keyword">function</span>(<span class="params">m, $1</span>)&#123;</span><br><span class="line">        deps.<span class="title function_">push</span>($1);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//加载依赖，完成后再执行factory</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>由于框架设计是在“纯前端实现”的约束条件下，使得模块化框架对于依赖的分析必须在模块资源加载完成之后才能做出识别。这将引起两个性能相关的问题：</p>
+<ol>
+<li>require被强制为关键字而不能被压缩。否则factory.toString()的分析将没有意义。</li>
+<li>依赖加载只能串行进行，当一个模块加载完成之后才知道后面的依赖关系。</li>
+</ol>
+<p>第一个问题还好，尤其是在gzip下差不多多少字节，但是要配置js压缩器保留require函数不压缩。第二个问题就比较麻烦了，虽然seajs有seajs-combo插件可以一定程度上减少请求，但仍然不能很好的解决这个问题。举个例子，有如下seajs模块依赖关系树：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/fouber/blog/master/assets/seajs.png" alt="seajs依赖树"></p>
+<blockquote>
+<p>ps: 图片来源 <a target="_blank" rel="noopener" href="http://weibo.com/guozhiw">@raphealguo</a></p>
+</blockquote>
+<p>采用seajs-combo插件之后，静态资源请求的效果是这样的：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="http://www.example.com/page.js">http://www.example.com/page.js</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.example.com/a.js,b.js">http://www.example.com/a.js,b.js</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.example.com/c.js,d.js,e.js">http://www.example.com/c.js,d.js,e.js</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.example.com/f.js">http://www.example.com/f.js</a></li>
+</ol>
+<p>工作过程是</p>
+<ol>
+<li>框架先请求了入口文件page.js</li>
+<li>加载完成后分析factory函数，发现依赖了a.js和b.js，然后发起一个combo请求，加载a.js和b.js</li>
+<li>a.js和b.js加载完成后又进一步分析源码，才发现还依赖了c.js、d.js和e.js，再发起请求加载这三个文件</li>
+<li>完成c、d、e的加载之后，再分析，发现f.js依赖，再请求</li>
+<li>完成f.js的请求，page.js的依赖全部满足，执行它的factory函数。</li>
+</ol>
+<p>虽然combo可以在依赖层级上进行合并，但完成page.js的请求仍需要4个。很多团队在使用seajs的时候，为了避免这样的串行依赖请求问题，会自己实现打包方案，将所有文件直接打包在一起，放弃了模块化的按需加载能力，也是一种无奈之举。</p>
+<p>原因很简单</p>
+<blockquote>
+<p>以纯前端方式来实现模块依赖加载不能同时解决性能优化问题。</p>
+</blockquote>
+<p>归根结底，这样的结论是由前端领域语言的特点决定的。前端语言缺少三种编译能力，前面讲目录规范和部署规范时其实已经提到了一种能力，就是“资源定位的能力”，让工程师使用开发路径定位资源，编译后可转换为部署路径。其他语言编写的程序几乎都没有web这种物理上分离的资源部署策略，而且大多具都有类似’getResource(path)’这样的函数，用于在运行环境下定位当初的开发资源，这样不管项目怎么部署，只要getResource函数运行正常就行了。可惜前端语言没有这样的资源定位接口，只有url这样的资源定位符，它指向的其实并不是开发路径，而是部署路径。</p>
+<p>这里可以简单列举出前端语言缺少三种的语言能力：</p>
+<ul>
+<li>资源定位的能力：使用开发路径进行资源定位，项目发布后转换成部署路径</li>
+<li>依赖声明的能力：声明一个资源依赖另一个资源的能力</li>
+<li>资源嵌入的能力：把一个资源的编译内容嵌入到另一个文件中</li>
+</ul>
+<p>以后我会在完善前端开发体系理论的时候在详细介绍这三种语言能力的必要性和原子性，这里就暂时不展开说明了。</p>
+<blockquote>
+<p>fis最核心的编译思想就是围绕这三种语言能力设计的。</p>
+</blockquote>
+<p>要兼顾性能的同时解决模块化依赖管理和加载问题，其关键点在于</p>
+<blockquote>
+<p>不能运行时去分析模块间的依赖关系，而要让框架提前知道依赖树。</p>
+</blockquote>
+<p>了解了原因，我们就要自己动手设计模块化框架了。不要害怕，模块化框架其实很简单，思想、规范都是经过很多前辈总结的结果，我们只要遵从他们的设计思想去实现就好了。</p>
+<p>参照已有规范，我定义了三个模块化框架接口：</p>
+<ul>
+<li>模块定义接口：<code>define(id, factory);</code></li>
+<li>异步加载接口：<code>require.async(ids, callback);</code></li>
+<li>框架配置接口：<code>require.config(options);</code></li>
+</ul>
+<p>利用构建工具建立模块依赖关系表，再将关系表注入到代码中，调用<code>require.config</code>接口让框架知道完整的依赖树，从而实现<code>require.async</code>在异步加载模块时能提前预知所有依赖的资源，一次性请求回来。</p>
+<p>以上面的page.js依赖树为例，构建工具会生成如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">    deps : &#123;</span><br><span class="line">        <span class="string">&#x27;page.js&#x27;</span> : [ <span class="string">&#x27;a.js&#x27;</span>, <span class="string">&#x27;b.js&#x27;</span> ],</span><br><span class="line">        <span class="string">&#x27;a.js&#x27;</span>    : [ <span class="string">&#x27;c.js&#x27;</span> ],</span><br><span class="line">        <span class="string">&#x27;b.js&#x27;</span>    : [ <span class="string">&#x27;d.js&#x27;</span>, <span class="string">&#x27;e.js&#x27;</span> ],</span><br><span class="line">        <span class="string">&#x27;c.js&#x27;</span>    : [ <span class="string">&#x27;f.js&#x27;</span> ],</span><br><span class="line">        <span class="string">&#x27;d.js&#x27;</span>    : [ <span class="string">&#x27;f.js&#x27;</span> ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>当执行<code>require.async(&#39;page.js&#39;, fn);</code>语句时，框架查询config.deps表，就能知道要发起一个这样的combo请求：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.example.com/f.js,c.js,d.js,e.js,a.js,b.js,page.js">http://www.example.com/f.js,c.js,d.js,e.js,a.js,b.js,page.js</a></p>
+</blockquote>
+<p>从而实现<code>按需加载</code>和<code>请求合并</code>两项性能优化需求。</p>
+<p>根据这样的设计思路，我请 <a target="_blank" rel="noopener" href="https://github.com/hinc">@hinc</a> 帮忙实现了这个框架，我告诉他，deps里不但会有js，还会有css，所以也要兼容一下。hinc果然是执行能力非常强的小伙伴，仅一个下午的时间就搞定了框架的实现，我们给这个框架取名为 <a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat.js/blob/master/scrat.js">scrat.js</a>，仅有393行。</p>
+<p>前面提到fis具有资源依赖声明的编译能力。因此只要工程师按照fis规定的书写方式在代码中声明依赖关系，就能在构建的最后阶段自动获得fis系统整理好的依赖树，然后对依赖的数据结构进行调整、输出，满足框架要求就搞定了！fis规定的资源依赖声明方式为：<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E5%9C%A8html%E4%B8%AD%E5%A3%B0%E6%98%8E%E4%BE%9D%E8%B5%96">在html中声明依赖</a>，<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E5%9C%A8js%E4%B8%AD%E5%A3%B0%E6%98%8E%E4%BE%9D%E8%B5%96">在js中声明依赖</a>，<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E5%9C%A8css%E4%B8%AD%E5%A3%B0%E6%98%8E%E4%BE%9D%E8%B5%96">在css中声明依赖</a>。</p>
+<p>接下来，我要写一个配置，将依赖关系表注入到代码中。fis构建是分流程的，具体构建流程可以看<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86">这里</a>。fis会在<code>postpackager</code>阶段之前创建好完整的依赖树表，我就在这个时候写一个插件来处理即可。</p>
+<p>编辑<code>fis-conf.js</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//postpackager插件接受4个参数，</span></span><br><span class="line"><span class="comment">//ret包含了所有项目资源以及资源表、依赖树，其中包括：</span></span><br><span class="line"><span class="comment">//   ret.src: 所有项目文件对象</span></span><br><span class="line"><span class="comment">//   ret.pkg: 所有项目打包生成的额外文件</span></span><br><span class="line"><span class="comment">//   reg.map: 资源表结构化数据</span></span><br><span class="line"><span class="comment">//其他参数暂时不用管</span></span><br><span class="line"><span class="keyword">var</span> createFrameworkConfig = <span class="keyword">function</span>(<span class="params">ret, conf, settings, opt</span>)&#123;</span><br><span class="line">    <span class="comment">//创建一个对象，存放处理后的配置项</span></span><br><span class="line">    <span class="keyword">var</span> map = &#123;&#125;;</span><br><span class="line">    <span class="comment">//依赖树数据</span></span><br><span class="line">    map.<span class="property">deps</span> = &#123;&#125;;</span><br><span class="line">    <span class="comment">//遍历所有项目文件</span></span><br><span class="line">    fis.<span class="property">util</span>.<span class="title function_">map</span>(ret.<span class="property">src</span>, <span class="keyword">function</span>(<span class="params">subpath, file</span>)&#123;</span><br><span class="line">        <span class="comment">//文件的依赖数据就在file对象的requires属性中，直接赋值即可</span></span><br><span class="line">        <span class="keyword">if</span>(file.<span class="property">requires</span> &amp;&amp; file.<span class="property">requires</span>.<span class="property">length</span>)&#123;</span><br><span class="line">            map.<span class="property">deps</span>[file.<span class="property">id</span>] = file.<span class="property">requires</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="property">deps</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//在modules.postpackager阶段处理依赖树，调用插件函数</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;modules.postpackager&#x27;</span>, [createFrameworkConfig]);</span><br></pre></td></tr></table></figure>
+
+<p>我们准备一下项目代码，看看构建的时候发生了什么：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/fouber/blog/master/assets/deps.png" alt="依赖声明"></p>
+<p>执行fis release查看命令行输出，可以看到consolog.log的内容为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">deps</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;components/bar/bar.js&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;components/bar/bar.css&#x27;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;components/foo/foo.js&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;components/bar/bar.js&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;components/foo/foo.css&#x27;</span></span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到js和同名的css自动建立了依赖关系，这是fis默认进行的依赖声明。有了这个表，我们就可以把它注入到代码中了。我们为页面准备一个替换用的钩子，比如约定为<code>__FRAMEWORK_CONFIG__</code>，这样用户就可以根据需要在合适的地方获取并使用这些数据。模块化框架的配置一般都是写在非模块化文件中的，比如html页面里，所以我们应该只针对views目录下的文件做这样的替换就可以。所以我们需要给views下的文件进行一个标记，只有views下的html或js文件才需要进行依赖树数据注入，具体的配置为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.path&#x27;</span>, [</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**.md&#x27;</span>,</span><br><span class="line">        release : <span class="literal">false</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/component_modules\/(.*)$/i</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/components\/(.*)$/i</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/views\/(.*)$/</span>,</span><br><span class="line">        <span class="comment">//给views目录下的文件加一个isViews属性标记，用以标记文件分类</span></span><br><span class="line">        <span class="comment">//我们可以在插件中拿到文件对象的这个值</span></span><br><span class="line">        isViews : <span class="literal">true</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**&#x27;</span>,</span><br><span class="line">        useStandard : <span class="literal">false</span>,</span><br><span class="line">        useOptimizer : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> createFrameworkConfig = <span class="keyword">function</span>(<span class="params">ret, conf, settings, opt</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> map = &#123;&#125;;</span><br><span class="line">    map.<span class="property">deps</span> = &#123;&#125;;</span><br><span class="line">    fis.<span class="property">util</span>.<span class="title function_">map</span>(ret.<span class="property">src</span>, <span class="keyword">function</span>(<span class="params">subpath, file</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(file.<span class="property">requires</span> &amp;&amp; file.<span class="property">requires</span>.<span class="property">length</span>)&#123;</span><br><span class="line">            map.<span class="property">deps</span>[file.<span class="property">id</span>] = file.<span class="property">requires</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//把配置文件序列化</span></span><br><span class="line">    <span class="keyword">var</span> stringify = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(map, <span class="literal">null</span>, opt.<span class="property">optimize</span> ? <span class="literal">null</span> : <span class="number">4</span>);</span><br><span class="line">    <span class="comment">//再次遍历文件，找到isViews标记的文件</span></span><br><span class="line">    <span class="comment">//替换里面的__FRAMEWORK_CONFIG__钩子</span></span><br><span class="line">    fis.<span class="property">util</span>.<span class="title function_">map</span>(ret.<span class="property">src</span>, <span class="keyword">function</span>(<span class="params">subpath, file</span>)&#123;</span><br><span class="line">        <span class="comment">//有isViews标记，并且是js或者html类文件，才需要做替换</span></span><br><span class="line">        <span class="keyword">if</span>(file.<span class="property">isViews</span> &amp;&amp; (file.<span class="property">isJsLike</span> || file.<span class="property">isHtmlLike</span>))&#123;</span><br><span class="line">            <span class="keyword">var</span> content = file.<span class="title function_">getContent</span>();</span><br><span class="line">            <span class="comment">//替换文件内容</span></span><br><span class="line">            content = content.<span class="title function_">replace</span>(<span class="regexp">/\b__FRAMEWORK_CONFIG__\b/g</span>, stringify);</span><br><span class="line">            file.<span class="title function_">setContent</span>(content);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;modules.postpackager&#x27;</span>, [createFrameworkConfig]);</span><br><span class="line"></span><br><span class="line"><span class="comment">//项目配置</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;proj&#x27;</span>);     <span class="comment">//将name、version独立配置，统管全局</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;version&#x27;</span>, <span class="string">&#x27;1.0.3&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>我在<code>views/index.html</code>中写了这样的代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;scrat.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="built_in">require</span>.<span class="title function_">config</span>(__FRAMEWORK_CONFIG__);</span></span><br><span class="line"><span class="language-javascript">        <span class="built_in">require</span>.<span class="title function_">async</span>(<span class="string">&#x27;components/foo/foo.js&#x27;</span>, <span class="keyword">function</span>(<span class="params">foo</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">//todo</span></span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>执行 <code>fis release -d ../release</code> 之后，得到构建后的内容为：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/public/proj/1.0.3/scrat.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;deps&quot;</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;components/bar/bar.js&quot;</span>: [</span></span><br><span class="line"><span class="language-javascript">                    <span class="string">&quot;components/bar/bar.css&quot;</span></span></span><br><span class="line"><span class="language-javascript">                ],</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;components/foo/foo.js&quot;</span>: [</span></span><br><span class="line"><span class="language-javascript">                    <span class="string">&quot;components/bar/bar.js&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                    <span class="string">&quot;components/foo/foo.css&quot;</span></span></span><br><span class="line"><span class="language-javascript">                ]</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">        <span class="built_in">require</span>.<span class="title function_">async</span>(<span class="string">&#x27;components/foo/foo.js&#x27;</span>, <span class="keyword">function</span>(<span class="params">foo</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">//todo</span></span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在调用 <code>require.async(&#39;components/foo/foo.js&#39;)</code> 之际，模块化框架已经知道了这个foo.js依赖于bar.js、bar.css以及foo.css，因此可以发起两个combo请求去加载所有依赖的js、css文件，完成后再执行回调。</p>
+<p>现在模块的id有一些问题，因为模块发布会有版本号信息，因此模块id也应该携带版本信息，从前面的依赖树生成配置代码中我们可以看到模块id其实也是文件的一个属性，因此我们可以在roadmap.path中重新为文件赋予id属性，使其携带版本信息：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.path&#x27;</span>, [</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**.md&#x27;</span>,</span><br><span class="line">        release : <span class="literal">false</span>,</span><br><span class="line">        isHtmlLike : <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/component_modules\/(.*)$/i</span>,</span><br><span class="line">        <span class="comment">//追加id属性</span></span><br><span class="line">        id : <span class="string">&#x27;$1&#x27;</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/components\/(.*)$/i</span>,</span><br><span class="line">        <span class="comment">//追加id属性，id为【项目名/版本号/文件路径】</span></span><br><span class="line">        id : <span class="string">&#x27;$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/views\/(.*)$/</span>,</span><br><span class="line">        <span class="comment">//给views目录下的文件加一个isViews属性标记，用以标记文件分类</span></span><br><span class="line">        <span class="comment">//我们可以在插件中拿到文件对象的这个值</span></span><br><span class="line">        isViews : <span class="literal">true</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**&#x27;</span>,</span><br><span class="line">        useStandard : <span class="literal">false</span>,</span><br><span class="line">        useOptimizer : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+
+<p>重新构建项目，我们得到了新的结果：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/public/proj/1.0.4/logo.png&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/public/proj/1.0.4/scrat.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;deps&quot;</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;proj/1.0.4/bar/bar.js&quot;</span>: [</span></span><br><span class="line"><span class="language-javascript">                    <span class="string">&quot;proj/1.0.4/bar/bar.css&quot;</span></span></span><br><span class="line"><span class="language-javascript">                ],</span></span><br><span class="line"><span class="language-javascript">                <span class="string">&quot;proj/1.0.4/foo/foo.js&quot;</span>: [</span></span><br><span class="line"><span class="language-javascript">                    <span class="string">&quot;proj/1.0.4/bar/bar.js&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">                    <span class="string">&quot;proj/1.0.4/foo/foo.css&quot;</span></span></span><br><span class="line"><span class="language-javascript">                ]</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">        <span class="built_in">require</span>.<span class="title function_">async</span>(<span class="string">&#x27;proj/1.0.4/foo/foo.js&#x27;</span>, <span class="keyword">function</span>(<span class="params">foo</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="comment">//todo</span></span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>you see？所有id都会被修改为我们指定的模式，这就是以文件为中心的编译系统的威力。</p>
+<blockquote>
+<p>以文件对象为中心构建系统应该通过配置指定文件的各种属性。插件并不自己实现某种规范规定，而是读取file对象的对应属性值，这样插件的职责单一，规范又能统一起来被用户指定，为完整的前端开发体系设计奠定了坚实规范配置的基础。</p>
+</blockquote>
+<p>接下来还有一个问题，就是模块名太长，开发中写这么长的模块名非常麻烦。我们可以借鉴流行的模块化框架中常用的缩短模块名手段——别名(alias)——来降低开发中模块引用的成本。此外，目前的配置其实会针对所有文件生成依赖关系表，我们的开发概念定义只有components和component_modules目录下的文件才是模块化的，因此我们可以进一步的对文件进行分类，得到这样配置规范：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.path&#x27;</span>, [</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**.md&#x27;</span>,</span><br><span class="line">        release : <span class="literal">false</span>,</span><br><span class="line">        isHtmlLike : <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/component_modules\/(.*)$/i</span>,</span><br><span class="line">        id : <span class="string">&#x27;$1&#x27;</span>,</span><br><span class="line">        <span class="comment">//追加isComponentModules标记属性</span></span><br><span class="line">        isComponentModules : <span class="literal">true</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/components\/(.*)$/i</span>,</span><br><span class="line">        id : <span class="string">&#x27;$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span>,</span><br><span class="line">        <span class="comment">//追加isComponents标记属性</span></span><br><span class="line">        isComponents : <span class="literal">true</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/c/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="regexp">/^\/views\/(.*)$/</span>,</span><br><span class="line">        isViews : <span class="literal">true</span>,</span><br><span class="line">        release : <span class="string">&#x27;/public/$&#123;name&#125;/$&#123;version&#125;/$1&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        reg : <span class="string">&#x27;**&#x27;</span>,</span><br><span class="line">        useStandard : <span class="literal">false</span>,</span><br><span class="line">        useOptimizer : <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+
+<p>然后我们为一些模块id建立别名：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> createFrameworkConfig = <span class="keyword">function</span>(<span class="params">ret, conf, settings, opt</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> map = &#123;&#125;;</span><br><span class="line">    map.<span class="property">deps</span> = &#123;&#125;;</span><br><span class="line">    <span class="comment">//别名收集表</span></span><br><span class="line">    map.<span class="property">alias</span> = &#123;&#125;;</span><br><span class="line">    fis.<span class="property">util</span>.<span class="title function_">map</span>(ret.<span class="property">src</span>, <span class="keyword">function</span>(<span class="params">subpath, file</span>)&#123;</span><br><span class="line">    	<span class="comment">//添加判断，只有components和component_modules目录下的文件才需要建立依赖树或别名</span></span><br><span class="line">    	<span class="keyword">if</span>(file.<span class="property">isComponents</span> || file.<span class="property">isComponentModules</span>)&#123;</span><br><span class="line">            <span class="comment">//判断一下文件名和文件夹是否同名，如果同名则建立一个别名</span></span><br><span class="line">            <span class="keyword">var</span> match = subpath.<span class="title function_">match</span>(<span class="regexp">/^\/components\/(.*?([^\/]+))\/\2\.js$/i</span>);</span><br><span class="line">            <span class="keyword">if</span>(match &amp;&amp; match[<span class="number">1</span>] &amp;&amp; !map.<span class="property">alias</span>.<span class="title function_">hasOwnProperty</span>(match[<span class="number">1</span>]))&#123;</span><br><span class="line">                map.<span class="property">alias</span>[match[<span class="number">1</span>]] = file.<span class="property">id</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(file.<span class="property">requires</span> &amp;&amp; file.<span class="property">requires</span>.<span class="property">length</span>)&#123;</span><br><span class="line">                map.<span class="property">deps</span>[file.<span class="property">id</span>] = file.<span class="property">requires</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">var</span> stringify = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(map, <span class="literal">null</span>, opt.<span class="property">optimize</span> ? <span class="literal">null</span> : <span class="number">4</span>);</span><br><span class="line">    fis.<span class="property">util</span>.<span class="title function_">map</span>(ret.<span class="property">src</span>, <span class="keyword">function</span>(<span class="params">subpath, file</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(file.<span class="property">isViews</span> &amp;&amp; (file.<span class="property">isJsLike</span> || file.<span class="property">isHtmlLike</span>))&#123;</span><br><span class="line">            <span class="keyword">var</span> content = file.<span class="title function_">getContent</span>();</span><br><span class="line">            content = content.<span class="title function_">replace</span>(<span class="regexp">/\b__FRAMEWORK_CONFIG__\b/g</span>, stringify);</span><br><span class="line">            file.<span class="title function_">setContent</span>(content);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;modules.postpackager&#x27;</span>, [createFrameworkConfig]);</span><br></pre></td></tr></table></figure>
+
+<p>再次构建，在注入的代码中就能看到alias字段了：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">    <span class="string">&quot;deps&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;proj/1.0.5/bar/bar.js&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;proj/1.0.5/bar/bar.css&quot;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&quot;proj/1.0.5/foo/foo.js&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;proj/1.0.5/bar/bar.js&quot;</span>,</span><br><span class="line">            <span class="string">&quot;proj/1.0.5/foo/foo.css&quot;</span></span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;alias&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;bar&quot;</span>: <span class="string">&quot;proj/1.0.5/bar/bar.js&quot;</span>,</span><br><span class="line">        <span class="string">&quot;foo&quot;</span>: <span class="string">&quot;proj/1.0.5/foo/foo.js&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这样，代码中的 <code>require(&#39;foo&#39;);</code> 就等价于 <code>require(&#39;proj/1.0.5/foo/foo.js&#39;);</code>了。</p>
+<p>还剩最后一个小小的需求，就是希望能像写nodejs一样开发js模块，也就是要求实现define的自动包裹功能，这个可以通过文件编译的 <a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E9%85%8D%E7%BD%AEAPI#modulespostprocessor">postprocessor</a> 插件完成。配置为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在postprocessor对所有js后缀的文件进行内容处理：</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;modules.postprocessor.js&#x27;</span>, <span class="keyword">function</span>(<span class="params">content, file</span>)&#123;</span><br><span class="line">    <span class="comment">//只对模块化js文件进行包装</span></span><br><span class="line">    <span class="keyword">if</span>(file.<span class="property">isComponents</span> || file.<span class="property">isComponentModules</span>)&#123;</span><br><span class="line">        content = <span class="string">&#x27;define(&quot;&#x27;</span> + file.<span class="property">id</span> + </span><br><span class="line">                  <span class="string">&#x27;&quot;, function(require,exports,module)&#123;&#x27;</span> +</span><br><span class="line">                  content + <span class="string">&#x27;&#125;);&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> content;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>所有在components目录和component_modules目录下的js文件都会被包裹define，并自动根据roadmap.path中的id配置进行模块定义了。</p>
+<p>最煎熬的一天终于过去了，睡一觉，拥抱一下周末。</p>
+<h2 id="2014年02月15日-超晴"><a href="#2014年02月15日-超晴" class="headerlink" title="2014年02月15日 - 超晴"></a>2014年02月15日 - 超晴</h2><p>周末的天气非常好哇，一觉睡到中午才起，这么好的天气写码岂不是很loser？！</p>
+<h2 id="2014年02月16日-小雨"><a href="#2014年02月16日-小雨" class="headerlink" title="2014年02月16日 - 小雨"></a>2014年02月16日 - 小雨</h2><p>居然浪费了一天，剩下的时间不多了，今天要抓紧啊！！！</p>
+<p>让我们来回顾一下已经完成了哪些工作：</p>
+<ul>
+<li>规范<ul>
+<li>开发规范<ul>
+<li><del>模块化开发，js模块化，css模块化，像nodejs一样的模块化开发</del></li>
+<li><del>组件化开发，js、css、</del>handlebars维护在一起</li>
+</ul>
+</li>
+<li>部署规范<ul>
+<li><del>采用nodejs后端，基本部署规范应该参考 <a target="_blank" rel="noopener" href="http://expressjs.com/">express</a> 项目部署</del></li>
+<li><del>按版本号做非覆盖式发布</del></li>
+<li><del>公共模块可发布给第三方共享</del></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>框架<ul>
+<li><del>js模块化框架，支持请求合并，按需加载等性能优化点</del></li>
+</ul>
+</li>
+<li>工具<ul>
+<li>可以编译stylus为css</li>
+<li>支持js、css、图片压缩</li>
+<li>允许图片压缩后以base64编码形式嵌入到css、js或html中</li>
+<li>与ci平台集成</li>
+<li>文件监听、浏览器自动刷新</li>
+<li>本地预览、数据模拟</li>
+</ul>
+</li>
+<li>仓库<ul>
+<li>支持component模块安装和使用</li>
+</ul>
+</li>
+</ul>
+<p>剩下的几个需求中有些是fis默认支持的，比如base64内嵌功能，图片会先经过编译流程，得到压缩后的内容fis再对其进行base64化的内嵌处理。由于fis的内嵌功能支持任意文件的内嵌，所以，这个语言能力扩展可以同时解决前端模板和图片base64内嵌需求，比如我们有这样的代码：</p>
+<pre><code>project
+  - components
+    - foo
+      - foo.js
+      - foo.css
+      - foo.handlebars
+      - foo.png
+</code></pre>
+<p>无需配置，既可以<a target="_blank" rel="noopener" href="https://github.com/fex-team/fis/wiki/%E5%9C%A8js%E4%B8%AD%E5%B5%8C%E5%85%A5%E8%B5%84%E6%BA%90">在js中嵌入资源</a>，比如 foo.js 中可以这样写：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//依赖声明</span></span><br><span class="line"><span class="keyword">var</span> bar =  <span class="built_in">require</span>(<span class="string">&#x27;../bar/bar.js&#x27;</span>);</span><br><span class="line"><span class="comment">//把handlebars文件的字符串形式嵌入到js中</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="title function_">__inline</span>(<span class="string">&#x27;foo.handlebars&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> tpl = <span class="title class_">Handlebars</span>.<span class="title function_">compile</span>(text);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">render</span> = <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="title function_">tpl</span>(data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//把图片的base64嵌入到js中</span></span><br><span class="line"><span class="keyword">var</span> data = <span class="title function_">__inline</span>(<span class="string">&#x27;foo.png&#x27;</span>);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">getImage</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">    img.<span class="property">src</span> = data;</span><br><span class="line">    <span class="keyword">return</span> img;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>编译后得到：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">define</span>(<span class="string">&quot;proj/1.0.5/foo/foo.js&quot;</span>, <span class="keyword">function</span>(<span class="params"><span class="built_in">require</span>,<span class="built_in">exports</span>,<span class="variable language_">module</span></span>)&#123;</span><br><span class="line"><span class="comment">//依赖声明</span></span><br><span class="line"><span class="keyword">var</span> bar =  <span class="built_in">require</span>(<span class="string">&#x27;proj/1.0.5/bar/bar.js&#x27;</span>);</span><br><span class="line"><span class="comment">//把handlebars文件的字符串形式嵌入到js中</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;&lt;h1&gt;&#123;&#123;title&#125;&#125;&lt;/h1&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> tpl = <span class="title class_">Handlebars</span>.<span class="title function_">compile</span>(text);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">render</span> = <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">tpl</span>(data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//把图片的base64嵌入到js中</span></span><br><span class="line"><span class="keyword">var</span> data = <span class="string">&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoA...&#x27;</span>;</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">getImage</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">    img.<span class="property">src</span> = data;</span><br><span class="line">    <span class="keyword">return</span> img;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>支持stylus也非常简单，fis在 <a href="">parser</a> 阶段处理非标准语言，这个阶段可以把非标准的js(coffee&#x2F;前端模板)、css(less&#x2F;sass&#x2F;stylus)、html(markdown)语言转换为标准的js、css或html。处理之后那些文件还能和标准语言一起经历预处理、语言能力扩展、后处理、校验、测试、压缩等阶段。</p>
+<p>所以，要支持stylus的编译，只要在fis-conf.js中添加这样的配置即可：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//依赖开源的stylus包</span></span><br><span class="line"><span class="keyword">var</span> stylus = <span class="built_in">require</span>(<span class="string">&#x27;stylus&#x27;</span>);</span><br><span class="line"><span class="comment">//编译插件只负责处理文件内容</span></span><br><span class="line"><span class="keyword">var</span> stylusParser = <span class="keyword">function</span>(<span class="params">content, file, conf</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">stylus</span>(content, conf).<span class="title function_">render</span>();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//配置编译流程，styl后缀的文件经过编译插件函数处理</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;modules.parser.styl&#x27;</span>, stylusParser);</span><br><span class="line"><span class="comment">//告诉fis，styl后缀的文件，被当做css处理，编译后后缀也是css</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">set</span>(<span class="string">&#x27;roadmap.ext.styl&#x27;</span>, <span class="string">&#x27;css&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这样我们项目中的*.styl后缀的文件都会被编译为css内容，并且会在后面的流程中被当做css内容处理，比如压缩、csssprite等。</p>
+<p>文件监听、自动刷新都是fis内置的功能，fis的release命令集合了所有编译所需的参数，</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">fis release -h</span><br><span class="line"></span><br><span class="line">Usage: release [options]</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">  -h, --<span class="built_in">help</span>             output usage information</span><br><span class="line">  -d, --dest &lt;names&gt;     release output destination</span><br><span class="line">  -m, --md5 [level]      md5 release option</span><br><span class="line">  -D, --domains          add domain name</span><br><span class="line">  -l, --lint             with lint</span><br><span class="line">  -t, --<span class="built_in">test</span>             with unit testing</span><br><span class="line">  -o, --optimize         with optimizing</span><br><span class="line">  -p, --pack             with package</span><br><span class="line">  -w, --watch            monitor the changes of project</span><br><span class="line">  -L, --live             automatically reload your browser</span><br><span class="line">  -c, --clean            clean compile cache</span><br><span class="line">  -r, --root &lt;path&gt;      <span class="built_in">set</span> project root</span><br><span class="line">  -f, --file &lt;filename&gt;  <span class="built_in">set</span> fis-conf file</span><br><span class="line">  -u, --unique           use unique compile caching</span><br><span class="line">  --verbose              <span class="built_in">enable</span> verbose output</span><br></pre></td></tr></table></figure>
+
+<p>这些参数是可以随意组合的，比如我们想文件监听、自动刷新，则使用：</p>
+<pre><code>fis release -wL
+</code></pre>
+<p>压缩、打包、文件监听、自动刷新、发布到output目录，则使用：</p>
+<pre><code>fis release -opwLd output
+</code></pre>
+<blockquote>
+<p>构建工具不需要那么多命令，或者develop、release等不同状态的配置文件，应该从命令行切换编译参数，从而实现开发&#x2F;上线构建模式的切换。</p>
+</blockquote>
+<p>另外，fis是命令行工具，各种内置的插件也是完全独立无环境依赖的，可以与ci平台直接对接，并在各个主流操作系统下运行正常。</p>
+<p>利用fis的内置的各种编译功能，我们离目标又近了许多：</p>
+<ul>
+<li>规范<ul>
+<li>开发规范<ul>
+<li><del>模块化开发，js模块化，css模块化，像nodejs一样的模块化开发</del></li>
+<li><del>组件化开发，js、css、handlebars维护在一起</del></li>
+</ul>
+</li>
+<li>部署规范<ul>
+<li><del>采用nodejs后端，基本部署规范应该参考express项目部署</del></li>
+<li><del>按版本号做非覆盖式发布</del></li>
+<li><del>公共模块可发布给第三方共享</del></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>框架<ul>
+<li><del>js模块化框架，支持请求合并，按需加载等性能优化点</del></li>
+</ul>
+</li>
+<li>工具<ul>
+<li><del>可以编译stylus为css</del></li>
+<li><del>支持js、css、图片压缩</del></li>
+<li><del>允许图片压缩后以base64编码形式嵌入到css、js或html中</del></li>
+<li><del>与ci平台集成</del></li>
+<li><del>文件监听、浏览器自动刷新</del></li>
+<li>本地预览、数据模拟</li>
+</ul>
+</li>
+<li>仓库<ul>
+<li>支持component模块安装和使用</li>
+</ul>
+</li>
+</ul>
+<p>剩下两个，我们可以通过扩展fis的命令行插件来实现。fis有11个编译流程扩展点，还有一个命令行扩展点。要扩展命令行插件很简单，只要我们将插件安装到与fis同级的node_modules目录下即可。比如：</p>
+<pre><code>node_modules
+  - fis
+  - fis-command-say
+</code></pre>
+<p>那么执行 <code>fis say</code> 这个命令，就能调用到那个fis-command-say插件了。剩下的这个component模块安装，我就利用了这个扩展点，结合component开源的 <a target="_blank" rel="noopener" href="https://www.npmjs.org/package/component-installer">component-installer</a> 包，我就可以把component整合当前开发体系中，这里我们需要创建一个npm包来提供扩展，而不能直接在fis-conf.js中扩展命令行，插件代码我就不贴了，可以看 <a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat-command-install/blob/master/index.js">这里</a>。</p>
+<p>眼前我们有了一个差不多100行的fis-conf.js文件，还有几个插件，如果我把这样一个零散的系统交付团队使用，那么大家使用的步骤差不多是这样的：</p>
+<ol>
+<li>安装fis，<code>npm install -g fis</code></li>
+<li>安装component安装用的命令行插件，<code>npm insatll -g fis-command-component</code></li>
+<li>安装stylus编译插件，<code>npm install -g fis-parser-stylus</code></li>
+<li>下载一份配置文件，fis-conf.js，修改里面的name、version配置</li>
+</ol>
+<p>这种情况让团队用起来会有很多问题。首先，安装过程太过麻烦，其次如果项目多，那么fis-conf.js不能同步升级，这是非常严重的问题。grunt的gruntfile.js也是如此。如果说有一个项目用了某套grunt配置感觉很爽，那么下个项目也想用这套方案，复制gruntfile.js是必须的操作，项目用的多了，同步gruntfile的成本就变得非常高了。</p>
+<p>因此，fis提供了一种“包装”的能力，它允许你将fis作为内核，包装出一个新的命令行工具，这个工具内置了一些fis的配置，并且把所有命令行调用的参数传递给fis内核去处理。</p>
+<p>我准备把这套系统打包为一个新的工具，给它取名为 <code>scrat</code>，也是一只<a target="_blank" rel="noopener" href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&fr=ala1&word=scrat">松鼠</a>。这个新工具的目录结构是这样的：</p>
+<pre><code>scrat
+  - bin
+    - scrat
+  - node_modules
+    - fis
+    - fis-parser-handlebars
+    - fis-lint-jshint
+    - scrat-command-install
+    - scrat-command-server
+    - scrat-parser-stylus
+  - index.js
+  - package.json
+</code></pre>
+<p>其中，index.js的内容为：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//require一下fis模块</span></span><br><span class="line"><span class="keyword">var</span> fis = <span class="variable language_">module</span>.<span class="property">exports</span> = <span class="built_in">require</span>(<span class="string">&#x27;fis&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//声明命令行工具名称</span></span><br><span class="line">fis.<span class="property">cli</span>.<span class="property">name</span> = <span class="string">&#x27;scrat&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义插件前缀，允许加载scrat-xxx-xxx插件，或者fis-xxx-xxx插件，</span></span><br><span class="line"><span class="comment">//这样可以形成scrat自己的插件系统</span></span><br><span class="line">fis.<span class="property">require</span>.<span class="property">prefixes</span> = [ <span class="string">&#x27;scrat&#x27;</span>, <span class="string">&#x27;fis&#x27;</span> ];</span><br><span class="line"></span><br><span class="line"><span class="comment">//把前面的配置都写在这里统一管理</span></span><br><span class="line"><span class="comment">//项目中就不用再写了</span></span><br><span class="line">fis.<span class="property">config</span>.<span class="title function_">merge</span>(&#123;...&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>将这个npm包发布出来，我们就有了一个全新的开发工具，这个工具可以解决前面说的13项技术问题，并提供一套完整的集成解决方案，而你的团队使用的时候，只有两个步骤：</p>
+<ol>
+<li>安装这个工具，npm install -g scrat</li>
+<li>项目配置只有两项，name和version</li>
+</ol>
+<p>使用新工具的命令、参数几乎和fis完全一样：</p>
+<pre><code>scrat release [options]
+scrat server start
+scrat install &lt;name@version&gt; [options]
+</code></pre>
+<p>而scrat这个工具所内置的配置将变成规范文档描述给团队同学，这套系统要比grunt那种松散的构建系统组成方式更容易被多个团队、多个项目同时共享。</p>
+<blockquote>
+<p>熬了一个通宵，基本算是完成了。。。</p>
+</blockquote>
+<h2 id="2014年02月17日-多云"><a href="#2014年02月17日-多云" class="headerlink" title="2014年02月17日 - 多云"></a>2014年02月17日 - 多云</h2><p>终于到了周一，交付了一个新的开发工具——<a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat/">scrat</a>，及其使用 <a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat/#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">文档</a>。</p>
+<p>然而，过去的三天，为了构造这套前端开发体系，都写了哪些代码呢？</p>
+<ul>
+<li>基于fis的一套<a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat/blob/master/index.js">规范及插件配置</a>，274行；</li>
+<li>scrat install命令行<a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat-command-install/blob/master/index.js">插件</a>，用于安装component模块，74行；</li>
+<li>scrat server命令行<a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat-command-server/blob/master/index.js">插件</a>，用于启动nodejs的服务器，203行</li>
+<li>编译stylus的<a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat-parser-stylus/blob/master/index.js">插件</a>，10行</li>
+<li>编译handlebars的<a target="_blank" rel="noopener" href="https://github.com/fouber/fis-parser-handlebars/blob/master/index.js">插件</a>，6行</li>
+<li>一个模块化框架 <a target="_blank" rel="noopener" href="https://github.com/scrat-team/scrat.js/blob/master/scrat.js">scrat.js</a>，393行</li>
+</ul>
+<p>一共 <code>960行</code> 代码，用了4人&#x2F;天。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>不可否认，为大规模前端团队设计集成解决方案需要花费非常多的心思。</p>
+</blockquote>
+<p>如果说只是实现一个简单的编译+压缩+文件监+听自动刷新的常规构建系统，基于fis应该不超过1小时就能完成一个，但要实践完整的前端集成解决方案，确实需要点时间。</p>
+<p>如之前一篇 <a target="_blank" rel="noopener" href="https://github.com/fouber/blog/issues/1">文章</a> 所讲，前端集成解决方案有8项技术要素，除了组件仓库，其他7项对于企业级前端团队来说，应该都需要完整实现的。即便暂时不想实现，也会随着业务发展而被迫慢慢完善，这个完善过程是普适的。</p>
+<p>对于前端集成解决方案的实践，可以总结出这些设计步骤：</p>
+<ol>
+<li>设计开发概念，定义开发资源的分类（模块化&#x2F;非模块化）</li>
+<li>设计开发目录，降低开发、维护成本（开发规范）</li>
+<li>根据运维和业务要求，设计部署规范（部署规范）</li>
+<li>设计工具，完成开发目录和部署目录的转换（开发-部署转换）</li>
+<li>设计模块化框架，兼顾性能优化（开发框架）</li>
+<li>扩展工具，支持开发框架的构建需求（框架构建需求）</li>
+<li>流程整合（开发、测试、联调、上线等流程接入）</li>
+</ol>
+<p>我们可以看看业界已有团队提出的各种解决方案，无不以这种思路来设计和发展的：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://seajs.org/">seajs开发体系</a>，支付宝团队前端开发体系，以 <a target="_blank" rel="noopener" href="https://github.com/spmjs/spm">spm</a> 为构建和包管理工具</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fex-team/fis-plus">fis-plus</a>，百度绝大多数前端团队使用的开发体系，以fis为构建工具内核，以<a target="_blank" rel="noopener" href="https://www.npmjs.org/package/lights">lights</a>为包管理工具</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ecomfe/edp">edp</a>，百度ecomfe前端开发体系，以 <a target="_blank" rel="noopener" href="https://github.com/ecomfe/edp">edp</a> 为构建和包管理工具</li>
+<li><a target="_blank" rel="noopener" href="http://madscript.com/modjs/">modjs</a>，腾讯AlloyTeam团队出品的开发体系</li>
+<li><a target="_blank" rel="noopener" href="http://yeoman.io/">yeoman</a>，google出品的解决方案，以grunt为构建工具，bower为包管理工具</li>
+</ul>
+<p>纵观这些公司出品的前端集成解决方案，深入剖析其中的框架、规范、工具和流程，都可以发现一些共通的影子，设计思想殊途同归，不约而同的朝着一种方向前进，那就是前端集成解决方案。尝试将前端工程孤立的技术要素整合起来，解决常见的领域问题。</p>
+<blockquote>
+<p>或许有人会问，不就是写页面么，用得着这么复杂？</p>
+</blockquote>
+<p>在这里我不能给出肯定或者否定的答复。</p>
+<p>因为单纯从语言的角度来说，html、js、css(甚至有人认为css是数据结构，而非语言)确实是最简单最容易上手的开发语言，不用模块化、不用工具、不用压缩，任何人都可以快速上手，完成一两个功能简单的页面。所以说，在一般情况下，前端开发非常简单。</p>
+<blockquote>
+<p>在规模很小的项目中，前端技术要素彼此不会直接产生影响，因此无需集成解决方案。</p>
+</blockquote>
+<p>但正是由于前端语言这种灵活松散的特点，使得前端项目规模在达到一定规模后，工程问题凸显，成为发展瓶颈，各种技术要素彼此之间开始出现关联，要用模块化开发，就必须对应某个模块化框架，用这个框架就必须对应某个构建工具，要用这个工具，就必须对应某个包管理工具……这个时候，完整实践前端集成解决方案就成了不二选择。</p>
+<blockquote>
+<p>当前端项目达到一定规模后，工程问题将成为主要瓶颈，原来孤立的技术要素开始彼此产生影响，需要有人从比较高的角度去梳理、寻找适合自己团队的集成解决方案。</p>
+</blockquote>
+<p>所以会出现一些框架或工具在小项目中使用的好好的，一旦放到团队里使用就非常困难的情况。</p>
+<p>前端入门虽易工程不易，且行写珍惜！</p>
+</article><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/07/25/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E4%B8%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E6%A1%86%E6%9E%B6/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg8.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">前端工程与模块化框架</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/07/25/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E4%B8%8E%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="前端工程与性能优化"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg9.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-25</div><div class="title">前端工程与性能优化</div></div></a></div><div><a href="/2024/07/25/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E4%B8%8E%E6%A8%A1%E5%9D%97%E5%8C%96%E6%A1%86%E6%9E%B6/" title="前端工程与模块化框架"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-25</div><div class="title">前端工程与模块化框架</div></div></a></div><div><a href="/2024/07/26/%E5%9C%A8GitHub%E4%B8%8A%E6%94%B6%E9%9B%86%E7%9A%84%E6%9C%80%E5%85%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/" title="在GitHub上收集的最全的前端资源汇总"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg12.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-26</div><div class="title">在GitHub上收集的最全的前端资源汇总</div></div></a></div><div><a href="/2024/07/26/git%E9%AB%98%E8%B4%A8%E9%87%8F%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B/" title="高质量的 Git 中文教程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg9.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-26</div><div class="title">高质量的 Git 中文教程</div></div></a></div><div><a href="/2024/07/26/%E3%80%90Hello%20CTF%E3%80%91%E6%94%B6%E5%BD%95%E5%9B%BD%E5%86%85%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BB%A5%E5%8F%8ACTF%E9%A2%86%E5%9F%9F%E7%9A%84%E4%BC%98%E7%A7%80%E8%A7%86%E9%A2%91%E4%BD%9C%E8%80%85/" title="【Hello CTF】收录国内网络安全以及CTF领域的优秀视频作者"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg13.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-26</div><div class="title">【Hello CTF】收录国内网络安全以及CTF领域的优秀视频作者</div></div></a></div><div><a href="/2024/07/26/%E7%B2%BE%E5%93%81%E7%BC%96%E7%A8%8B%E8%B5%84%E6%BA%90/" title="在GitHub上收集的最全的前端资源汇总"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg9.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-26</div><div class="title">在GitHub上收集的最全的前端资源汇总</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about"><h1 class="author-info__name">你喜欢什么芝士</h1><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/onni-top" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/458020" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(/img/gzh.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%BD%93%E7%B3%BB%E5%BB%BA%E8%AE%BE%E6%97%A5%E8%AE%B0-github%E4%B8%8A%E6%91%98%E6%9D%A5%E5%85%85%E6%95%B0%E7%9A%84%E6%96%87%E7%AB%A0"><span class="toc-text">前端开发体系建设日记(github上摘来充数的文章)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2014%E5%B9%B402%E6%9C%8812%E6%97%A5-%E6%99%B4"><span class="toc-text">2014年02月12日 - 晴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2014%E5%B9%B402%E6%9C%8813%E6%97%A5-%E5%A4%9A%E4%BA%91"><span class="toc-text">2014年02月13日 - 多云</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-%E5%BC%80%E5%8F%91%E6%A6%82%E5%BF%B5%E5%AE%9A%E4%B9%89"><span class="toc-text">0. 开发概念定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%BC%80%E5%8F%91%E7%9B%AE%E5%BD%95%E8%AE%BE%E8%AE%A1"><span class="toc-text">1. 开发目录设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%83%A8%E7%BD%B2%E7%9B%AE%E5%BD%95%E8%AE%BE%E8%AE%A1"><span class="toc-text">2. 部署目录设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AEfis%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83%E5%92%8C%E9%83%A8%E7%BD%B2%E8%A7%84%E8%8C%83"><span class="toc-text">3. 配置fis连接开发规范和部署规范</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2014%E5%B9%B402%E6%9C%8814%E6%97%A5-%E9%98%B4%E8%BD%AC%E5%A4%9A%E4%BA%91"><span class="toc-text">2014年02月14日 - 阴转多云</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2014%E5%B9%B402%E6%9C%8815%E6%97%A5-%E8%B6%85%E6%99%B4"><span class="toc-text">2014年02月15日 - 超晴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2014%E5%B9%B402%E6%9C%8816%E6%97%A5-%E5%B0%8F%E9%9B%A8"><span class="toc-text">2014年02月16日 - 小雨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2014%E5%B9%B402%E6%9C%8817%E6%97%A5-%E5%A4%9A%E4%BA%91"><span class="toc-text">2014年02月17日 - 多云</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/07/26/git%E9%AB%98%E8%B4%A8%E9%87%8F%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B/" title="高质量的 Git 中文教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高质量的 Git 中文教程"/></a><div class="content"><a class="title" href="/2024/07/26/git%E9%AB%98%E8%B4%A8%E9%87%8F%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B/" title="高质量的 Git 中文教程">高质量的 Git 中文教程</a><time datetime="2024-07-26T10:44:08.000Z" title="发表于 2024-07-26 18:44:08">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/26/%E3%80%90Hello%20CTF%E3%80%91%E6%94%B6%E5%BD%95%E5%9B%BD%E5%86%85%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BB%A5%E5%8F%8ACTF%E9%A2%86%E5%9F%9F%E7%9A%84%E4%BC%98%E7%A7%80%E8%A7%86%E9%A2%91%E4%BD%9C%E8%80%85/" title="【Hello CTF】收录国内网络安全以及CTF领域的优秀视频作者"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg13.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【Hello CTF】收录国内网络安全以及CTF领域的优秀视频作者"/></a><div class="content"><a class="title" href="/2024/07/26/%E3%80%90Hello%20CTF%E3%80%91%E6%94%B6%E5%BD%95%E5%9B%BD%E5%86%85%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BB%A5%E5%8F%8ACTF%E9%A2%86%E5%9F%9F%E7%9A%84%E4%BC%98%E7%A7%80%E8%A7%86%E9%A2%91%E4%BD%9C%E8%80%85/" title="【Hello CTF】收录国内网络安全以及CTF领域的优秀视频作者">【Hello CTF】收录国内网络安全以及CTF领域的优秀视频作者</a><time datetime="2024-07-26T10:44:08.000Z" title="发表于 2024-07-26 18:44:08">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/26/%E5%9C%A8GitHub%E4%B8%8A%E6%94%B6%E9%9B%86%E7%9A%84%E6%9C%80%E5%85%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/" title="在GitHub上收集的最全的前端资源汇总"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg12.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在GitHub上收集的最全的前端资源汇总"/></a><div class="content"><a class="title" href="/2024/07/26/%E5%9C%A8GitHub%E4%B8%8A%E6%94%B6%E9%9B%86%E7%9A%84%E6%9C%80%E5%85%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/" title="在GitHub上收集的最全的前端资源汇总">在GitHub上收集的最全的前端资源汇总</a><time datetime="2024-07-26T10:44:08.000Z" title="发表于 2024-07-26 18:44:08">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/26/%E7%B2%BE%E5%93%81%E7%BC%96%E7%A8%8B%E8%B5%84%E6%BA%90/" title="在GitHub上收集的最全的前端资源汇总"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在GitHub上收集的最全的前端资源汇总"/></a><div class="content"><a class="title" href="/2024/07/26/%E7%B2%BE%E5%93%81%E7%BC%96%E7%A8%8B%E8%B5%84%E6%BA%90/" title="在GitHub上收集的最全的前端资源汇总">在GitHub上收集的最全的前端资源汇总</a><time datetime="2024-07-26T10:44:08.000Z" title="发表于 2024-07-26 18:44:08">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/25/JavaScript%E4%B8%93%E9%A2%98%E4%B9%8BjQuery%E9%80%9A%E7%94%A8%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95each%E7%9A%84%E5%AE%9E%E7%8E%B0/" title="JavaScript专题之jQuery通用遍历方法each的实现"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/bg2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript专题之jQuery通用遍历方法each的实现"/></a><div class="content"><a class="title" href="/2024/07/25/JavaScript%E4%B8%93%E9%A2%98%E4%B9%8BjQuery%E9%80%9A%E7%94%A8%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95each%E7%9A%84%E5%AE%9E%E7%8E%B0/" title="JavaScript专题之jQuery通用遍历方法each的实现">JavaScript专题之jQuery通用遍历方法each的实现</a><time datetime="2024-07-25T10:44:08.000Z" title="发表于 2024-07-25 18:44:08">2024-07-25</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:onni@onni.top" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://weibo.com/" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/" title="facebook"><i class="anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx1.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/onni-top" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/458020" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="你喜欢什么芝士" target="_blank">你喜欢什么芝士</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/onni-top/" title="github">github</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">14</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog.onni.top/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://img.onni.top/" title="onni图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.onnni.top/favicon.ico" alt="onni图床"/><span class="back-menu-item-text">onni图床</span></a><a class="back-menu-item" href="https://blog.onni.top/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/tx1.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://gemini.onni.top/" title="gemini"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="gemini"/><span class="back-menu-item-text">gemini</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://nextchat.onni.top/" title="nextchat"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="nextchat"/><span class="back-menu-item-text">nextchat</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/gallery/"><i class="anzhiyufont anzhiyu-icon-book faa-tada" style="font-size: 0.9em;"></i><span> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-cube faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>19</sup></a><a href="/tags/JavaScript%E4%B8%93%E9%A2%98/" style="font-size: 0.88rem;">JavaScript专题<sup>15</sup></a><a href="/tags/JavaScript%E6%B7%B1%E5%85%A5/" style="font-size: 0.88rem;">JavaScript深入<sup>15</sup></a><a href="/tags/git/" style="font-size: 0.88rem;">git<sup>1</sup></a><a href="/tags/%E4%BB%80%E4%B9%88%E9%83%BD%E5%AD%A6%E4%B8%80%E7%82%B9/" style="font-size: 0.88rem;">什么都学一点<sup>23</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">前端<sup>4</sup></a><a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 0.88rem;">安全<sup>1</sup></a><a href="/tags/%E6%90%AC%E8%BF%90/" style="font-size: 0.88rem;">搬运<sup>7</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="anzhiyufont anzhiyu-icon-comment-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("07/07/2024 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用onni-安知鱼主题!`,
+    `一念思量，名为变化`,
+    `
+        
+       ██████╗ ███╗   ██╗███╗   ██╗██╗
+      ██╔═══██╗████╗  ██║████╗  ██║██║
+      ██║   ██║██╔██╗ ██║██╔██╗ ██║██║
+      ██║   ██║██║╚██╗██║██║╚██╗██║██║
+      ╚██████╔╝██║ ╚████║██║ ╚████║██║
+       ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By onni V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by onni %c 你正在访问 你喜欢什么芝士 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你正在监控web中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const initWaline = () => {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline.onni.top/',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  const loadWaline = async () => {
+    if (typeof Waline === 'object') initWaline()
+    else {
+      await getCSS('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.css')
+      await getScript('https://cdn.cbd.int/@waline/client@2.15.5/dist/waline.js')
+      initWaline()
+    }
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://waline.onni.top/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+    }
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script>(() => {
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "945f4ac6-1ec6-4fce-a2bb-22beea872614";
+  (function () {
+    d = document;
+    s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+  $crisp.push(["safe", true])
+
+  const isChatBtn = true
+  const isChatHideShow = false
+
+  if (isChatBtn) {
+    const open = () => {
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+    }
+
+    const close = () => {
+      $crisp.push(["do", "chat:hide"])
+    }
+
+    close()
+    $crisp.push(["on", "chat:closed", function() {
+      close()
+    }])
+
+    window.chatBtnFn = () => {
+      $crisp.is("chat:visible") ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        $crisp.push(["do", "chat:hide"])
+      },
+      show: () => {
+        $crisp.push(["do", "chat:show"])
+      }
+    }
+  }
+})()</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
